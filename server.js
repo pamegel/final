@@ -231,10 +231,10 @@ function sendGreetMessage(recipientId, messageText) {
         type: "template",
         payload: {
           template_type: "button",
-          text : "นี้คือคู่มือสถานที่ท่องเที่ยวของคุณในปราจีนบุรี แมวมีตัวเลือกให้ข้างล่าง",
+          text : "อยากให้แมวช่วยหาที่เที่ยวให้เหรอ",
             buttons: [{
               type: "postback",
-              title: "หาที่เที่ยว",
+              title: "มีที่ไหนน่าเที่ยวบ้าง",
               payload: "findLocation"
             }, {
               type: "postback",
