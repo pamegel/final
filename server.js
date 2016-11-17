@@ -86,7 +86,7 @@ function receivedMessage(event) {
 
   if (messageText) {
     if (messageText === 'hello') {
-      sendTextMessage(senderID, "สวัสดีครับ :)");
+      sendTextMessage(senderID, "สวัสดีเหมียว");
     }
 
     // If we receive a text message, check to see if it matches a keyword
@@ -121,7 +121,7 @@ function receivedPostback(event) {
     findLocations(senderID);
   }
   else if(payload == 'noThank'){
-       sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือใช่ไหมครับ :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้ผมช่วยสิ")
+       sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
   } else {
     var result = "";
   }
@@ -141,14 +141,14 @@ function sendGreetMessage(recipientId, messageText) {
         type: "template",
         payload: {
           template_type: "button",
-          text : "นี้คือคู่มือสถานที่ท่องเที่ยวของคุณในปราจีนบุรี ผมจะช่วยคุณได้อย่างไร",
+          text : "นี้คือคู่มือสถานที่ท่องเที่ยวของคุณในปราจีนบุรี แมวมีตัวเลือกให้ข้างล่าง",
             buttons: [{
               type: "postback",
-              title: "ค้นหาที่เที่ยว",
+              title: "พาเที่ยวทีครับ",
               payload: "findLocation"
             }, {
               type: "postback",
-              title: "ไม่เป็นไร ขอบคุณ",
+              title: "ไม่เป็นไร ขอบคุณนะแมว",
               payload: "noThank"
             }],
         }
