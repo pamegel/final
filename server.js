@@ -88,6 +88,9 @@ function receivedMessage(event) {
     if (messageText === 'hello') {
       sendTextMessage(senderID, "สวัสดีเหมียววว");
     }
+    else if (messageText === 'hello'){
+      sendTextMessage(senderID, "ยินดีช่วยเหมียวว <3");
+    }
 
     // If we receive a text message, check to see if it matches a keyword
     // and send back the example. Otherwise, just echo the text we received.
@@ -99,7 +102,8 @@ function receivedMessage(event) {
         sendQuickReply(senderID);
         break;*/
       default:
-        sendTextMessage(senderID, "พิมพ์อะไรแมวไม่รู้เรื่อง :p ทักทายแมวด้วยคำว่า \" hello\" สิ" );
+        sendTextMessage(senderID, "พิมพ์อะไรแมวไม่รู้เรื่อง :p ทักทายแมวด้วยคำว่า \" hello\" สิ
+        \n หรือถ้าอยากขอบคุณละก็ พิมพ์ \" ขอบใจ \" " );
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
@@ -231,10 +235,10 @@ function sendGreetMessage(recipientId, messageText) {
         type: "template",
         payload: {
           template_type: "button",
-          text : "อยากให้แมวช่วยหาที่เที่ยวให้เหรอ",
+          text : "นี้คือคู่มือสถานที่ท่องเที่ยวของคุณในปราจีนบุรี แมวมีตัวเลือกให้ข้างล่าง",
             buttons: [{
               type: "postback",
-              title: "มีที่ไหนน่าเที่ยวบ้าง",
+              title: "หาที่เที่ยว",
               payload: "findLocation"
             }, {
               type: "postback",
