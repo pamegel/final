@@ -1,4 +1,3 @@
-var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
 var app = express()
@@ -16,8 +15,8 @@ app.get('/webhook', function(req, res) {
     res.send(req.query['hub.challenge'])
   } else {
     console.error("Failed validation. Make sure the validation tokens match.");
-    res.sendStatus(403);          
-  }  
+    res.sendStatus(403);
+  }
 });
 
 app.post('/webhook', function (req, res) {
@@ -45,19 +44,19 @@ app.post('/webhook', function (req, res) {
 
     // Assume all went well.
     //
-    // You must send back a 200, within 20 seconds, to let us know you've 
+    // You must send back a 200, within 20 seconds, to let us know you've
     // successfully received the callback. Otherwise, the request will time out.
     res.sendStatus(200);
   }
 })
-  
+
 function receivedMessage(event) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
   var timeOfMessage = event.timestamp;
   var message = event.message;
 
-  console.log("Received message for user %d and page %d at %d with message:", 
+  console.log("Received message for user %d and page %d at %d with message:",
     senderID, recipientID, timeOfMessage);
   console.log(JSON.stringify(message));
 
@@ -73,7 +72,7 @@ function receivedMessage(event) {
 
  /* if (isEcho) {
     // Just logging message echoes to console
-    console.log("Received echo for message %s and app %d with metadata %s", 
+    console.log("Received echo for message %s and app %d with metadata %s",
       messageId, appId, metadata);
     return;
   } else if (quickReply) {
@@ -113,22 +112,22 @@ function receivedPostback(event) {
   var recipientID = event.recipient.id;
   var timeOfPostback = event.timestamp;
 
-  // The 'payload' param is a developer-defined field which is set in a postback 
-  // button for Structured Messages. 
+  // The 'payload' param is a developer-defined field which is set in a postback
+  // button for Structured Messages.
   var payload = event.postback.payload;
 
-  console.log("Received postback for user %d and page %d with payload '%s' " + 
+  console.log("Received postback for user %d and page %d with payload '%s' " +
     "at %d", senderID, recipientID, payload, timeOfPostback);
-  if(payload == 'findRestaurant'){
-    findRestaurants(senderID);
+  if(payload == 'findLocation'){
+    findLocation(senderID);
   }
   else if(payload == 'noThank'){
-       sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย :("+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย") 
+       sendTextMessage(senderID, "แน่ใจนะครับ! ไม่ต้องการให้เราช่วยใช่ไหม :("+"\n"+"หากคุณต้องการมองหาสถานที่น่าเที่ยวในปราจีนบุรีอีก เพียงแค่ให้ผมแค่ถามผม")
   } else {
     var result = "";
   }
 
-  // When a postback is called, we'll send a message back to the sender to 
+  // When a postback is called, we'll send a message back to the sender to
   // let them know it was successful
   // sendTextMessage(senderID, emoji);
 }
@@ -145,11 +144,11 @@ function sendGreetMessage(recipientId, messageText) {
         type: "template",
         payload: {
           template_type: "button",
-          text : "นี้คือคู่มือร้านอาหารของคุณในปราจีนบุรี ผมจะช่วยคุณได้อย่างไร",
+          text : "นี้คือคู่มือสถานที่ท่องเที่ยวของคุณในปราจีนบุรี ผมจะช่วยคุณได้อย่างไร",
             buttons: [{
               type: "postback",
-              title: "ค้าหาร้านอาหาร",
-              payload: "findRestaurant"
+              title: "ค้าหาสถานที่",
+              payload: "findLocation"
             }, {
               type: "postback",
               title: "ไม่เป็นไร ขอบคุณ",
@@ -158,12 +157,12 @@ function sendGreetMessage(recipientId, messageText) {
         }
       }
     }
-  };  
+  };
 
   callSendAPI(messageData);
 }
 
-function findRestaurants(recipientId, messageText) {
+function findLocation(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
@@ -192,7 +191,7 @@ function findRestaurants(recipientId, messageText) {
               }]
            },
            {
-             title:"ร้านข้าว",
+             title:"สถานที่ท่องเที่ยว",
              item_url:"",
              image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
              subtitle:" ",
@@ -213,7 +212,7 @@ function findRestaurants(recipientId, messageText) {
   }
 };
 callSendAPI(messageData);
-} 
+}
 
 function sendTextMessage(recipientId, messageText) {
   var messageData = {
@@ -240,14 +239,14 @@ function callSendAPI(messageData) {
       var recipientId = body.recipient_id;
       var messageId = body.message_id;
 
-      console.log("Successfully sent generic message with id %s to recipient %s", 
+      console.log("Successfully sent generic message with id %s to recipient %s",
         messageId, recipientId);
     } else {
       console.error("Unable to send message.");
       console.error(response);
       console.error(error);
     }
-  });  
+  });
 }
 
 /*function sendQuickReply(recipientId) {
