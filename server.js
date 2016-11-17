@@ -98,6 +98,8 @@ function receivedMessage(event) {
       case 'hello':
         sendGreetMessage(senderID);
         break;
+        case 'ขอบใจ':
+        break;
       /*case 'quick reply':
         sendQuickReply(senderID);
         break;*/
