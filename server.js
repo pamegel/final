@@ -86,7 +86,7 @@ function receivedMessage(event) {
 
   if (messageText) {
     if (messageText === 'hello') {
-      sendTextMessage(senderID, "สวัสดีเหมียว");
+      sendTextMessage(senderID, "สวัสดีเหมียววว");
     }
 
     // If we receive a text message, check to see if it matches a keyword
@@ -144,11 +144,11 @@ function sendGreetMessage(recipientId, messageText) {
           text : "นี้คือคู่มือสถานที่ท่องเที่ยวของคุณในปราจีนบุรี แมวมีตัวเลือกให้ข้างล่าง",
             buttons: [{
               type: "postback",
-              title: "พาเที่ยวทีครับ",
+              title: "หาที่เที่ยว",
               payload: "findLocation"
             }, {
               type: "postback",
-              title: "ไม่เป็นไร ขอบคุณนะแมว",
+              title: "ไม่เป็นไร ขอบคุณ",
               payload: "noThank"
             }],
         }
