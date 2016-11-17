@@ -9,15 +9,15 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 app.get('/webhook', function(req, res) {
-  var key = 'EAAS1ZB8DeZBjsBAP2jZBZBtucXXY2TxgR1fM8wvTsVhtImZAW7dlrwdfqhMm5RsQhfQqENhURt7hAqyMHzC6urnbWftaH6E7FZBZAMlPn0T0xUDZCUemDwN87lxjdSxrKWg2jBNvGOeQMTH70eUq2jZCmbm5wkxKoyWZBA5P6mTMxoBwZDZD'
+  var key = 'EAAYB5mZATsskBACBdjfMpAB94jrghicZBhuJafK2go6d4uZCKBPqmAYDMJUuQZCtWRqy37uF1QGbBbos2aWtiLyyEs7aBtLjumrYFQQe2egZCWKNsFej4zVMeIRlWHvaV0kfmgiEEGT14VHIcqFeYN7eZBcJZAsqbJhCbOqx8024AZDZD'
   if (req.query['hub.mode'] === 'subscribe' &&
     req.query['hub.verify_token'] === key) {
     console.log("Validating webhook");
     res.send(req.query['hub.challenge'])
   } else {
     console.error("Failed validation. Make sure the validation tokens match.");
-    res.sendStatus(403);          
-  }  
+    res.sendStatus(403);
+  }
 });
 
 app.post('/webhook', function (req, res) {
@@ -45,19 +45,19 @@ app.post('/webhook', function (req, res) {
 
     // Assume all went well.
     //
-    // You must send back a 200, within 20 seconds, to let us know you've 
+    // You must send back a 200, within 20 seconds, to let us know you've
     // successfully received the callback. Otherwise, the request will time out.
     res.sendStatus(200);
   }
 });
- 
+
 function receivedMessage(event) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
   var timeOfMessage = event.timestamp;
   var message = event.message;
 
-  console.log("Received message for user %d and page %d at %d with message:", 
+  console.log("Received message for user %d and page %d at %d with message:",
     senderID, recipientID, timeOfMessage);
   console.log(JSON.stringify(message));
 
@@ -73,21 +73,20 @@ function receivedMessage(event) {
 
  /* if (isEcho) {
     // Just logging message echoes to console
-    console.log("Received echo for message %s and app %d with metadata %s", 
+    console.log("Received echo for message %s and app %d with metadata %s",
       messageId, appId, metadata);
     return;
   } else if (quickReply) {
     var quickReplyPayload = quickReply.payload;
     console.log("Quick reply for message %s with payload %s",
       messageId, quickReplyPayload);
-
     sendTextMessage(senderID, "Quick reply tapped");
     return;
   }*/
 
   if (messageText) {
     if (messageText === 'hello') {
-      sendTextMessage(senderID, "สวัสดีครับ :)");
+      sendTextMessage(senderID, "สวัสดีเหมียววว");
     }
 
     // If we receive a text message, check to see if it matches a keyword
@@ -100,7 +99,7 @@ function receivedMessage(event) {
         sendQuickReply(senderID);
         break;*/
       default:
-        sendTextMessage(senderID, messageText);
+        sendTextMessage(senderID, "พิมพ์อะไรแมวไม่รู้เรื่อง :p ทักทายแมวด้วยคำว่า \" hello\" สิ" );
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
@@ -112,22 +111,29 @@ function receivedPostback(event) {
   var recipientID = event.recipient.id;
   var timeOfPostback = event.timestamp;
 
-  // The 'payload' param is a developer-defined field which is set in a postback 
-  // button for Structured Messages. 
+  // The 'payload' param is a developer-defined field which is set in a postback
+  // button for Structured Messages.
   var payload = event.postback.payload;
 
-  console.log("Received postback for user %d and page %d with payload '%s' " + 
+  console.log("Received postback for user %d and page %d with payload '%s' " +
     "at %d", senderID, recipientID, payload, timeOfPostback);
-  if(payload == 'findRestaurant'){
-    findRestaurants(senderID);
+  if(payload == 'findLocation'){
+    findLocations(senderID);
   }
   else if(payload == 'noThank'){
-       sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย :("+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย") 
-  } else {
+       sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
+  }
+  else if (payload == 'fineHere') {
+    sendTextMessage(senderID, "ชือ : "
+    +"\n เวลาทำการ : "
+    +"\n วันเปิดปิด : "
+    +"\n คำอธิบาย : "
+    +"\n แผนที่ : ")
+  }else {
     var result = "";
   }
 
-  // When a postback is called, we'll send a message back to the sender to 
+  // When a postback is called, we'll send a message back to the sender to
   // let them know it was successful
   // sendTextMessage(senderID, emoji);
 }
@@ -142,11 +148,11 @@ function sendGreetMessage(recipientId, messageText) {
         type: "template",
         payload: {
           template_type: "button",
-          text : "นี้คือคู่มือร้านอาหารของคุณในปราจีนบุรี ผมจะช่วยคุณได้อย่างไร",
+          text : "นี้คือคู่มือสถานที่ท่องเที่ยวของคุณในปราจีนบุรี แมวมีตัวเลือกให้ข้างล่าง",
             buttons: [{
               type: "postback",
-              title: "ค้าหาร้านอาหาร",
-              payload: "findRestaurant"
+              title: "หาที่เที่ยว",
+              payload: "findLocation"
             }, {
               type: "postback",
               title: "ไม่เป็นไร ขอบคุณ",
@@ -155,12 +161,12 @@ function sendGreetMessage(recipientId, messageText) {
         }
       }
     }
-  };  
+  };
 
   callSendAPI(messageData);
 }
 
-function findRestaurants(recipientId, messageText) {
+function findLocations(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
@@ -172,7 +178,7 @@ function findRestaurants(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"ร้านข้าว",
+            title:"1",
             item_url:"",
             image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
             subtitle:" ",
@@ -189,7 +195,7 @@ function findRestaurants(recipientId, messageText) {
               }]
            },
            {
-             title:"ร้านข้าว",
+             title:"2",
              item_url:"",
              image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
              subtitle:" ",
@@ -204,13 +210,150 @@ function findRestaurants(recipientId, messageText) {
                  title:"ทุกที่ในปราจีนบุรี",
                  payload:"everyWhere"
                }]
-            }]
+            },
+            {
+              title:"3",
+              item_url:"",
+              image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+              subtitle:" ",
+              buttons:[
+                {
+                  type:"postback",
+                  title:"เลือกที่นี้",
+                  payload:"fineHere"
+                },
+                {
+                  type:"postback",
+                  title:"ทุกที่ในปราจีนบุรี",
+                  payload:"everyWhere"
+                }]
+             },
+             {
+               title:"4",
+               item_url:"",
+               image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+               subtitle:" ",
+               buttons:[
+                 {
+                   type:"postback",
+                   title:"เลือกที่นี้",
+                   payload:"fineHere"
+                 },
+                 {
+                   type:"postback",
+                   title:"ทุกที่ในปราจีนบุรี",
+                   payload:"everyWhere"
+                 }]
+              },
+              {
+                title:"5",
+                item_url:"",
+                image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+                subtitle:" ",
+                buttons:[
+                  {
+                    type:"postback",
+                    title:"เลือกที่นี้",
+                    payload:"fineHere"
+                  },
+                  {
+                    type:"postback",
+                    title:"ทุกที่ในปราจีนบุรี",
+                    payload:"everyWhere"
+                  }]
+               },
+               {
+                 title:"6",
+                 item_url:"",
+                 image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+                 subtitle:" ",
+                 buttons:[
+                   {
+                     type:"postback",
+                     title:"เลือกที่นี้",
+                     payload:"fineHere"
+                   },
+                   {
+                     type:"postback",
+                     title:"ทุกที่ในปราจีนบุรี",
+                     payload:"everyWhere"
+                   }]
+                },
+                {
+                  title:"7",
+                  item_url:"",
+                  image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+                  subtitle:" ",
+                  buttons:[
+                    {
+                      type:"postback",
+                      title:"เลือกที่นี้",
+                      payload:"fineHere"
+                    },
+                    {
+                      type:"postback",
+                      title:"ทุกที่ในปราจีนบุรี",
+                      payload:"everyWhere"
+                    }]
+                 },
+                 {
+                   title:"8",
+                   item_url:"",
+                   image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+                   subtitle:" ",
+                   buttons:[
+                     {
+                       type:"postback",
+                       title:"เลือกที่นี้",
+                       payload:"fineHere"
+                     },
+                     {
+                       type:"postback",
+                       title:"ทุกที่ในปราจีนบุรี",
+                       payload:"everyWhere"
+                     }]
+                  },
+                  {
+                    title:"9",
+                    item_url:"",
+                    image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+                    subtitle:" ",
+                    buttons:[
+                      {
+                        type:"postback",
+                        title:"เลือกที่นี้",
+                        payload:"fineHere"
+                      },
+                      {
+                        type:"postback",
+                        title:"ทุกที่ในปราจีนบุรี",
+                        payload:"everyWhere"
+                      }]
+                   },
+                   {
+                     title:"10",
+                     item_url:"",
+                     image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+                     subtitle:" ",
+                     buttons:[
+                       {
+                         type:"postback",
+                         title:"เลือกที่นี้",
+                         payload:"fineHere"
+                       },
+                       {
+                         type:"postback",
+                         title:"ทุกที่ในปราจีนบุรี",
+                         payload:"everyWhere"
+                       }]
+                    },
+          ]
       }
     }
   }
 };
 callSendAPI(messageData);
-} 
+}
 
 function sendTextMessage(recipientId, messageText) {
   var messageData = {
@@ -225,27 +368,10 @@ function sendTextMessage(recipientId, messageText) {
   callSendAPI(messageData);
 }
 
-function setGetStartedButton (payload){
-  var req = {
-        url: 'https://graph.facebook.com/v2.6/me/thread_settings',
-        qs: {access_token: 'EAAS1ZB8DeZBjsBAP2jZBZBtucXXY2TxgR1fM8wvTsVhtImZAW7dlrwdfqhMm5RsQhfQqENhURt7hAqyMHzC6urnbWftaH6E7FZBZAMlPn0T0xUDZCUemDwN87lxjdSxrKWg2jBNvGOeQMTH70eUq2jZCmbm5wkxKoyWZBA5P6mTMxoBwZDZD',
-        method: "POST",
-        json: {
-            "setting_type": "call_to_actions",
-            "thread_state": "new_thread",
-            "call_to_actions": [
-                {
-                    "payload": payload
-                }
-            ]
-        }
-    };
-};
-
 function callSendAPI(messageData) {
   request({
     uri: 'https://graph.facebook.com/v2.6/me/messages',
-    qs: { access_token: 'EAAS1ZB8DeZBjsBAP2jZBZBtucXXY2TxgR1fM8wvTsVhtImZAW7dlrwdfqhMm5RsQhfQqENhURt7hAqyMHzC6urnbWftaH6E7FZBZAMlPn0T0xUDZCUemDwN87lxjdSxrKWg2jBNvGOeQMTH70eUq2jZCmbm5wkxKoyWZBA5P6mTMxoBwZDZD' },
+    qs: { access_token: 'EAAYB5mZATsskBACBdjfMpAB94jrghicZBhuJafK2go6d4uZCKBPqmAYDMJUuQZCtWRqy37uF1QGbBbos2aWtiLyyEs7aBtLjumrYFQQe2egZCWKNsFej4zVMeIRlWHvaV0kfmgiEEGT14VHIcqFeYN7eZBcJZAsqbJhCbOqx8024AZDZD' },
     method: 'POST',
     json: messageData
 
@@ -254,14 +380,14 @@ function callSendAPI(messageData) {
       var recipientId = body.recipient_id;
       var messageId = body.message_id;
 
-      console.log("Successfully sent generic message with id %s to recipient %s", 
+      console.log("Successfully sent generic message with id %s to recipient %s",
         messageId, recipientId);
     } else {
       console.error("Unable to send message.");
       console.error(response);
       console.error(error);
     }
-  });  
+  });
 }
 
 /*function sendQuickReply(recipientId) {
