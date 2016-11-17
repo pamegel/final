@@ -124,7 +124,7 @@ function receivedPostback(event) {
        sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
   }
   else if (payload == 'fineHere') {
-    fineHere(senderID, "ชือ : "
+    fineHeres(senderID, "ชือ : "
     +"\n เวลาทำการ : "
     +"\n วันเปิดปิด : "
     +"\n คำอธิบาย : "
@@ -394,7 +394,7 @@ function callSendAPI(messageData) {
 }
 //------------------------------------------------------------------------------
 //------------ก่อนจาก-----------------------------------------------------------
-unction sendGreetMessage(recipientId, messageText) {
+unction fineHeres(recipientId, messageText) {
   var messageData = {
     recipient: {
       id: recipientId
