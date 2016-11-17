@@ -124,11 +124,13 @@ function receivedPostback(event) {
        sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
   }
   else if (payload == 'fineHere') {
-    fineHeres(senderID, "ชือ : "
+    sendTextMessage(senderID, "ชือ : "
     +"\n เวลาทำการ : "
     +"\n วันเปิดปิด : "
     +"\n คำอธิบาย : "
     +"\n แผนที่ : ");
+    fineHeres(senderID);
+
   }else {
     var result = "";
   }
@@ -394,7 +396,7 @@ function callSendAPI(messageData) {
 }
 //------------------------------------------------------------------------------
 //------------ก่อนจาก-----------------------------------------------------------
-unction fineHeres(recipientId, messageText) {
+function fineHeres(recipientId, messageText) {
   var messageData = {
     recipient: {
       id: recipientId
