@@ -124,7 +124,11 @@ function receivedPostback(event) {
        sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
   }
   else if (payload == 'fineHere') {
-    fineHere(senderID);
+    fineHere(senderID, "ชือ : "
+    +"\n เวลาทำการ : "
+    +"\n วันเปิดปิด : "
+    +"\n คำอธิบาย : "
+    +"\n แผนที่ : ");
   }else {
     var result = "";
   }
@@ -400,11 +404,7 @@ unction sendGreetMessage(recipientId, messageText) {
         type: "template",
         payload: {
           template_type: "button",
-          text : "ชือ : "
-          +"\n เวลาทำการ : "
-          +"\n วันเปิดปิด : "
-          +"\n คำอธิบาย : "
-          +"\n แผนที่ : ",
+          text : "",
             buttons: [{
               type: "postback",
               title: "อยากหาที่อื่นอีก",
