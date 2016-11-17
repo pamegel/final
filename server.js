@@ -117,11 +117,11 @@ function receivedPostback(event) {
 
   console.log("Received postback for user %d and page %d with payload '%s' " +
     "at %d", senderID, recipientID, payload, timeOfPostback);
-  if(payload == 'findRestaurant'){
-    findRestaurants(senderID);
+  if(payload == 'findLocation'){
+    findLocations(senderID);
   }
   else if(payload == 'noThank'){
-       sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย :("+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย")
+       sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือใช่ไหมครับ :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้ผมช่วยสิ")
   } else {
     var result = "";
   }
@@ -141,11 +141,11 @@ function sendGreetMessage(recipientId, messageText) {
         type: "template",
         payload: {
           template_type: "button",
-          text : "นี้คือคู่มือร้านอาหารของคุณในปราจีนบุรี ผมจะช่วยคุณได้อย่างไร",
+          text : "นี้คือคู่มือสถานที่ท่องเที่ยวของคุณในปราจีนบุรี ผมจะช่วยคุณได้อย่างไร",
             buttons: [{
               type: "postback",
-              title: "ค้าหาร้านอาหาร",
-              payload: "findRestaurant"
+              title: "ค้นหาที่เที่ยว",
+              payload: "findLocation"
             }, {
               type: "postback",
               title: "ไม่เป็นไร ขอบคุณ",
@@ -159,7 +159,7 @@ function sendGreetMessage(recipientId, messageText) {
   callSendAPI(messageData);
 }
 
-function findRestaurants(recipientId, messageText) {
+function findLocations(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
@@ -171,7 +171,7 @@ function findRestaurants(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"ร้านข้าว",
+            title:"ที่ท่องเที่ยว",
             item_url:"",
             image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
             subtitle:" ",
@@ -188,7 +188,7 @@ function findRestaurants(recipientId, messageText) {
               }]
            },
            {
-             title:"ร้านข้าว",
+             title:"ที่ท่องเที่ยว",
              item_url:"",
              image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
              subtitle:" ",
