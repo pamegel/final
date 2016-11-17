@@ -169,7 +169,6 @@ function findLocations(recipientId, messageText) {
       type:"template",
       payload:{
         template_type:"generic",
-        //ที่เที่ยว-------------------------------------------------------------------------------------
         elements:[
           {
             title:"1",
@@ -204,8 +203,144 @@ function findLocations(recipientId, messageText) {
                  title:"ทุกที่ในปราจีนบุรี",
                  payload:"everyWhere"
                }]
-            }]
-            //--------------------------------------------------------------------------------------
+            },
+            {
+              title:"3",
+              item_url:"",
+              image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+              subtitle:" ",
+              buttons:[
+                {
+                  type:"postback",
+                  title:"เลือกที่นี้",
+                  payload:"fineHere"
+                },
+                {
+                  type:"postback",
+                  title:"ทุกที่ในปราจีนบุรี",
+                  payload:"everyWhere"
+                }]
+             },
+             {
+               title:"4",
+               item_url:"",
+               image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+               subtitle:" ",
+               buttons:[
+                 {
+                   type:"postback",
+                   title:"เลือกที่นี้",
+                   payload:"fineHere"
+                 },
+                 {
+                   type:"postback",
+                   title:"ทุกที่ในปราจีนบุรี",
+                   payload:"everyWhere"
+                 }]
+              },
+              {
+                title:"5",
+                item_url:"",
+                image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+                subtitle:" ",
+                buttons:[
+                  {
+                    type:"postback",
+                    title:"เลือกที่นี้",
+                    payload:"fineHere"
+                  },
+                  {
+                    type:"postback",
+                    title:"ทุกที่ในปราจีนบุรี",
+                    payload:"everyWhere"
+                  }]
+               },
+               {
+                 title:"6",
+                 item_url:"",
+                 image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+                 subtitle:" ",
+                 buttons:[
+                   {
+                     type:"postback",
+                     title:"เลือกที่นี้",
+                     payload:"fineHere"
+                   },
+                   {
+                     type:"postback",
+                     title:"ทุกที่ในปราจีนบุรี",
+                     payload:"everyWhere"
+                   }]
+                },
+                {
+                  title:"7",
+                  item_url:"",
+                  image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+                  subtitle:" ",
+                  buttons:[
+                    {
+                      type:"postback",
+                      title:"เลือกที่นี้",
+                      payload:"fineHere"
+                    },
+                    {
+                      type:"postback",
+                      title:"ทุกที่ในปราจีนบุรี",
+                      payload:"everyWhere"
+                    }]
+                 },
+                 {
+                   title:"8",
+                   item_url:"",
+                   image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+                   subtitle:" ",
+                   buttons:[
+                     {
+                       type:"postback",
+                       title:"เลือกที่นี้",
+                       payload:"fineHere"
+                     },
+                     {
+                       type:"postback",
+                       title:"ทุกที่ในปราจีนบุรี",
+                       payload:"everyWhere"
+                     }]
+                  },
+                  {
+                    title:"9",
+                    item_url:"",
+                    image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+                    subtitle:" ",
+                    buttons:[
+                      {
+                        type:"postback",
+                        title:"เลือกที่นี้",
+                        payload:"fineHere"
+                      },
+                      {
+                        type:"postback",
+                        title:"ทุกที่ในปราจีนบุรี",
+                        payload:"everyWhere"
+                      }]
+                   },
+                   {
+                     title:"10",
+                     item_url:"",
+                     image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+                     subtitle:" ",
+                     buttons:[
+                       {
+                         type:"postback",
+                         title:"เลือกที่นี้",
+                         payload:"fineHere"
+                       },
+                       {
+                         type:"postback",
+                         title:"ทุกที่ในปราจีนบุรี",
+                         payload:"everyWhere"
+                       }]
+                    },
+          ]
       }
     }
   }
