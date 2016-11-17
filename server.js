@@ -128,7 +128,7 @@ function receivedPostback(event) {
     +"\n เวลาทำการ : "
     +"\n วันเปิดปิด : "
     +"\n คำอธิบาย : "
-    +"\n แผนที่ : "
+    +"\n แผนที่ : ")
   }else {
     var result = "";
   }
