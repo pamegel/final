@@ -406,7 +406,7 @@ function fineHeres(recipientId, messageText) {
         type: "template",
         payload: {
           template_type: "button",
-          text : "",
+          text : "หวังว่าจะช่วยได้นะ เหมียวว :3",
             buttons: [{
               type: "postback",
               title: "อยากหาที่อื่นอีก",
