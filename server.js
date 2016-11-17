@@ -88,7 +88,7 @@ function receivedMessage(event) {
     if (messageText === 'hello') {
       sendTextMessage(senderID, "สวัสดีเหมียววว");
     }
-    else if (messageText === 'hello'){
+    else if (messageText === 'ขอบใจ'){
       sendTextMessage(senderID, "ยินดีช่วยเหมียวว <3");
     }
 
