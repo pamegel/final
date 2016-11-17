@@ -102,7 +102,7 @@ function receivedMessage(event) {
         sendQuickReply(senderID);
         break;*/
       default:
-        sendTextMessage(senderID, "พิมพ์อะไรแมวไม่รู้เรื่อง :p ทักทายแมวด้วยคำว่า \" hello\" สิ \n หรือถ้าอยากขอบคุณละก็ พิมพ์ \" ขอบใจ \" " );
+        sendTextMessage(senderID, "พิมพ์อะไรแมวไม่รู้เรื่อง :p ทักทายแมวด้วยคำว่า \"hello\" สิ \nหรือถ้าอยากขอบคุณละก็ พิมพ์ \"ขอบใจ\" " );
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
