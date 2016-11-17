@@ -271,11 +271,6 @@ function findLocations(recipientId, messageText) {
                 type:"postback",
                 title:"เลือกที่นี้",
                 payload:"fineHere1"
-              },
-              {
-                type:"postback",
-                title:"ทุกที่ในปราจีนบุรี",
-                payload:"everyWhere"
               }]
            },
            {
@@ -288,11 +283,6 @@ function findLocations(recipientId, messageText) {
                  type:"postback",
                  title:"เลือกที่นี้",
                  payload:"fineHere2"
-               },
-               {
-                 type:"postback",
-                 title:"ทุกที่ในปราจีนบุรี",
-                 payload:"everyWhere"
                }]
             },
             {
@@ -305,11 +295,6 @@ function findLocations(recipientId, messageText) {
                   type:"postback",
                   title:"เลือกที่นี้",
                   payload:"fineHere3"
-                },
-                {
-                  type:"postback",
-                  title:"ทุกที่ในปราจีนบุรี",
-                  payload:"everyWhere"
                 }]
              },
              {
@@ -322,11 +307,6 @@ function findLocations(recipientId, messageText) {
                    type:"postback",
                    title:"เลือกที่นี้",
                    payload:"fineHere4"
-                 },
-                 {
-                   type:"postback",
-                   title:"ทุกที่ในปราจีนบุรี",
-                   payload:"everyWhere"
                  }]
               },
               {
@@ -339,11 +319,6 @@ function findLocations(recipientId, messageText) {
                     type:"postback",
                     title:"เลือกที่นี้",
                     payload:"fineHere5"
-                  },
-                  {
-                    type:"postback",
-                    title:"ทุกที่ในปราจีนบุรี",
-                    payload:"everyWhere"
                   }]
                },
                {
@@ -356,11 +331,6 @@ function findLocations(recipientId, messageText) {
                      type:"postback",
                      title:"เลือกที่นี้",
                      payload:"fineHere6"
-                   },
-                   {
-                     type:"postback",
-                     title:"ทุกที่ในปราจีนบุรี",
-                     payload:"everyWhere"
                    }]
                 },
                 {
@@ -373,11 +343,6 @@ function findLocations(recipientId, messageText) {
                       type:"postback",
                       title:"เลือกที่นี้",
                       payload:"fineHere7"
-                    },
-                    {
-                      type:"postback",
-                      title:"ทุกที่ในปราจีนบุรี",
-                      payload:"everyWhere"
                     }]
                  },
                  {
@@ -390,11 +355,6 @@ function findLocations(recipientId, messageText) {
                        type:"postback",
                        title:"เลือกที่นี้",
                        payload:"fineHere8"
-                     },
-                     {
-                       type:"postback",
-                       title:"ทุกที่ในปราจีนบุรี",
-                       payload:"everyWhere"
                      }]
                   },
                   {
@@ -407,11 +367,6 @@ function findLocations(recipientId, messageText) {
                         type:"postback",
                         title:"เลือกที่นี้",
                         payload:"fineHere9"
-                      },
-                      {
-                        type:"postback",
-                        title:"ทุกที่ในปราจีนบุรี",
-                        payload:"everyWhere"
                       }]
                    },
                    {
@@ -425,13 +380,8 @@ function findLocations(recipientId, messageText) {
                          title:"เลือกที่นี้",
                          payload:"fineHere10"
                        },
-                       {
-                         type:"postback",
-                         title:"ทุกที่ในปราจีนบุรี",
-                         payload:"everyWhere"
-                       }]
-                    },
-          ]
+                       ]
+                    }]
       }
     }
   }
