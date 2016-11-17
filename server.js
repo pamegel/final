@@ -389,7 +389,7 @@ function callSendAPI(messageData) {
   });
 }
 //------------------------------------------------------------------------------
-//------------ก่อนจาก
+//------------ก่อนจาก-----------------------------------------------------------
 unction sendGreetMessage(recipientId, messageText) {
   var messageData = {
     recipient: {
@@ -404,7 +404,7 @@ unction sendGreetMessage(recipientId, messageText) {
           +"\n เวลาทำการ : "
           +"\n วันเปิดปิด : "
           +"\n คำอธิบาย : "
-          +"\n แผนที่ : "),
+          +"\n แผนที่ : ",
             buttons: [{
               type: "postback",
               title: "อยากหาที่อื่นอีก",
