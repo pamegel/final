@@ -99,7 +99,7 @@ function receivedMessage(event) {
         sendQuickReply(senderID);
         break;*/
       default:
-        sendTextMessage(senderID, messageText);
+        sendTextMessage(senderID, "พิมพ์อะไรแมวไม่รู้เรื่อง :p ทักทายแมวด้วยคำว่า \" hello\" สิ" );
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
@@ -123,7 +123,7 @@ function receivedPostback(event) {
   else if(payload == 'noThank'){
        sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
   }
-  else if (payload == 'findhere') {
+  else if (payload == 'fineHere') {
     sendTextMessage(senderID, "ชือ : "
     +"\n เวลาทำการ : "
     +"\n วันเปิดปิด : "
