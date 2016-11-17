@@ -122,7 +122,14 @@ function receivedPostback(event) {
   }
   else if(payload == 'noThank'){
        sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
-  } else {
+  }
+  else if (payload == 'findhere') {
+    sendTextMessage(senderID, "ชือ : "
+    +"\n เวลาทำการ : "
+    +"\n วันเปิดปิด : "
+    +"\n คำอธิบาย : "
+    +"\n แผนที่ : "
+  }else {
     var result = "";
   }
 
