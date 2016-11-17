@@ -123,8 +123,89 @@ function receivedPostback(event) {
   else if(payload == 'noThank'){
        sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
   }
-  else if (payload == 'fineHere') {
-    sendTextMessage(senderID, "ชือ : "
+  else if (payload == 'fineHere1') {
+    sendTextMessage(senderID, "ชือ : 1"
+    +"\n เวลาทำการ : "
+    +"\n วันเปิดปิด : "
+    +"\n คำอธิบาย : "
+    +"\n แผนที่ : ");
+    fineHeres(senderID);
+
+  }
+  else if (payload == 'fineHere2') {
+    sendTextMessage(senderID, "ชือ : 2"
+    +"\n เวลาทำการ : "
+    +"\n วันเปิดปิด : "
+    +"\n คำอธิบาย : "
+    +"\n แผนที่ : ");
+    fineHeres(senderID);
+
+  }
+  else if (payload == 'fineHere3') {
+    sendTextMessage(senderID, "ชือ : 3"
+    +"\n เวลาทำการ : "
+    +"\n วันเปิดปิด : "
+    +"\n คำอธิบาย : "
+    +"\n แผนที่ : ");
+    fineHeres(senderID);
+
+  }
+  else if (payload == 'fineHere4') {
+    sendTextMessage(senderID, "ชือ : 4"
+    +"\n เวลาทำการ : "
+    +"\n วันเปิดปิด : "
+    +"\n คำอธิบาย : "
+    +"\n แผนที่ : ");
+    fineHeres(senderID);
+
+  }
+  else if (payload == 'fineHere5') {
+    sendTextMessage(senderID, "ชือ : 5"
+    +"\n เวลาทำการ : "
+    +"\n วันเปิดปิด : "
+    +"\n คำอธิบาย : "
+    +"\n แผนที่ : ");
+    fineHeres(senderID);
+
+  }
+  else if (payload == 'fineHere6') {
+    sendTextMessage(senderID, "ชือ : 6"
+    +"\n เวลาทำการ : "
+    +"\n วันเปิดปิด : "
+    +"\n คำอธิบาย : "
+    +"\n แผนที่ : ");
+    fineHeres(senderID);
+
+  }
+  else if (payload == 'fineHere7') {
+    sendTextMessage(senderID, "ชือ : 7"
+    +"\n เวลาทำการ : "
+    +"\n วันเปิดปิด : "
+    +"\n คำอธิบาย : "
+    +"\n แผนที่ : ");
+    fineHeres(senderID);
+
+  }
+  else if (payload == 'fineHere8') {
+    sendTextMessage(senderID, "ชือ : 8"
+    +"\n เวลาทำการ : "
+    +"\n วันเปิดปิด : "
+    +"\n คำอธิบาย : "
+    +"\n แผนที่ : ");
+    fineHeres(senderID);
+
+  }
+  else if (payload == 'fineHere9') {
+    sendTextMessage(senderID, "ชือ : 9"
+    +"\n เวลาทำการ : "
+    +"\n วันเปิดปิด : "
+    +"\n คำอธิบาย : "
+    +"\n แผนที่ : ");
+    fineHeres(senderID);
+
+  }
+  else if (payload == 'fineHere10') {
+    sendTextMessage(senderID, "ชือ : 10"
     +"\n เวลาทำการ : "
     +"\n วันเปิดปิด : "
     +"\n คำอธิบาย : "
@@ -189,7 +270,7 @@ function findLocations(recipientId, messageText) {
               {
                 type:"postback",
                 title:"เลือกที่นี้",
-                payload:"fineHere"
+                payload:"fineHere1"
               },
               {
                 type:"postback",
@@ -206,7 +287,7 @@ function findLocations(recipientId, messageText) {
                {
                  type:"postback",
                  title:"เลือกที่นี้",
-                 payload:"fineHere"
+                 payload:"fineHere2"
                },
                {
                  type:"postback",
@@ -223,7 +304,7 @@ function findLocations(recipientId, messageText) {
                 {
                   type:"postback",
                   title:"เลือกที่นี้",
-                  payload:"fineHere"
+                  payload:"fineHere3"
                 },
                 {
                   type:"postback",
@@ -240,7 +321,7 @@ function findLocations(recipientId, messageText) {
                  {
                    type:"postback",
                    title:"เลือกที่นี้",
-                   payload:"fineHere"
+                   payload:"fineHere4"
                  },
                  {
                    type:"postback",
@@ -257,7 +338,7 @@ function findLocations(recipientId, messageText) {
                   {
                     type:"postback",
                     title:"เลือกที่นี้",
-                    payload:"fineHere"
+                    payload:"fineHere5"
                   },
                   {
                     type:"postback",
@@ -274,7 +355,7 @@ function findLocations(recipientId, messageText) {
                    {
                      type:"postback",
                      title:"เลือกที่นี้",
-                     payload:"fineHere"
+                     payload:"fineHere6"
                    },
                    {
                      type:"postback",
@@ -291,7 +372,7 @@ function findLocations(recipientId, messageText) {
                     {
                       type:"postback",
                       title:"เลือกที่นี้",
-                      payload:"fineHere"
+                      payload:"fineHere7"
                     },
                     {
                       type:"postback",
@@ -308,7 +389,7 @@ function findLocations(recipientId, messageText) {
                      {
                        type:"postback",
                        title:"เลือกที่นี้",
-                       payload:"fineHere"
+                       payload:"fineHere8"
                      },
                      {
                        type:"postback",
@@ -325,7 +406,7 @@ function findLocations(recipientId, messageText) {
                       {
                         type:"postback",
                         title:"เลือกที่นี้",
-                        payload:"fineHere"
+                        payload:"fineHere9"
                       },
                       {
                         type:"postback",
@@ -342,7 +423,7 @@ function findLocations(recipientId, messageText) {
                        {
                          type:"postback",
                          title:"เลือกที่นี้",
-                         payload:"fineHere"
+                         payload:"fineHere10"
                        },
                        {
                          type:"postback",
