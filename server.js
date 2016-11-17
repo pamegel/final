@@ -1,3 +1,4 @@
+var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
 var app = express()
@@ -8,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 app.get('/webhook', function(req, res) {
-  var key = 'EAAYB5mZATsskBAK1ZAMZCZBBBYZAYgOhZBZBeisYHHTDyfwxhE9S76fDc0YDEjhfdqmU6zF48EEejg4Kfc95ateETgY9O4OFgRqLuQmoNSyjHO0KRLcLK1OZCEwdV7z9bRzjBkq1VI0J2cDi9GZCsZBYzHyEHe6Bt6MW5J6VJxH2wjdAZDZD'
+  var key = 'EAAYB5mZATsskBACBdjfMpAB94jrghicZBhuJafK2go6d4uZCKBPqmAYDMJUuQZCtWRqy37uF1QGbBbos2aWtiLyyEs7aBtLjumrYFQQe2egZCWKNsFej4zVMeIRlWHvaV0kfmgiEEGT14VHIcqFeYN7eZBcJZAsqbJhCbOqx8024AZDZD'
   if (req.query['hub.mode'] === 'subscribe' &&
     req.query['hub.verify_token'] === key) {
     console.log("Validating webhook");
@@ -48,7 +49,7 @@ app.post('/webhook', function (req, res) {
     // successfully received the callback. Otherwise, the request will time out.
     res.sendStatus(200);
   }
-})
+});
 
 function receivedMessage(event) {
   var senderID = event.sender.id;
@@ -79,7 +80,6 @@ function receivedMessage(event) {
     var quickReplyPayload = quickReply.payload;
     console.log("Quick reply for message %s with payload %s",
       messageId, quickReplyPayload);
-
     sendTextMessage(senderID, "Quick reply tapped");
     return;
   }*/
@@ -98,7 +98,6 @@ function receivedMessage(event) {
       /*case 'quick reply':
         sendQuickReply(senderID);
         break;*/
-
       default:
         sendTextMessage(senderID, messageText);
     }
@@ -118,11 +117,11 @@ function receivedPostback(event) {
 
   console.log("Received postback for user %d and page %d with payload '%s' " +
     "at %d", senderID, recipientID, payload, timeOfPostback);
-  if(payload == 'findLocation'){
-    findLocation(senderID);
+  if(payload == 'findRestaurant'){
+    findRestaurants(senderID);
   }
   else if(payload == 'noThank'){
-       sendTextMessage(senderID, "แน่ใจนะครับ! ไม่ต้องการให้เราช่วยใช่ไหม :("+"\n"+"หากคุณต้องการมองหาสถานที่น่าเที่ยวในปราจีนบุรีอีก เพียงแค่ให้ผมแค่ถามผม")
+       sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย :("+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย")
   } else {
     var result = "";
   }
@@ -131,8 +130,6 @@ function receivedPostback(event) {
   // let them know it was successful
   // sendTextMessage(senderID, emoji);
 }
-
-
 
 function sendGreetMessage(recipientId, messageText) {
   var messageData = {
@@ -144,11 +141,11 @@ function sendGreetMessage(recipientId, messageText) {
         type: "template",
         payload: {
           template_type: "button",
-          text : "นี้คือคู่มือสถานที่ท่องเที่ยวของคุณในปราจีนบุรี ผมจะช่วยคุณได้อย่างไร",
+          text : "นี้คือคู่มือร้านอาหารของคุณในปราจีนบุรี ผมจะช่วยคุณได้อย่างไร",
             buttons: [{
               type: "postback",
-              title: "ค้าหาสถานที่",
-              payload: "findLocation"
+              title: "ค้าหาร้านอาหาร",
+              payload: "findRestaurant"
             }, {
               type: "postback",
               title: "ไม่เป็นไร ขอบคุณ",
@@ -162,7 +159,7 @@ function sendGreetMessage(recipientId, messageText) {
   callSendAPI(messageData);
 }
 
-function findLocation(recipientId, messageText) {
+function findRestaurants(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
@@ -191,7 +188,7 @@ function findLocation(recipientId, messageText) {
               }]
            },
            {
-             title:"สถานที่ท่องเที่ยว",
+             title:"ร้านข้าว",
              item_url:"",
              image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
              subtitle:" ",
@@ -230,7 +227,7 @@ function sendTextMessage(recipientId, messageText) {
 function callSendAPI(messageData) {
   request({
     uri: 'https://graph.facebook.com/v2.6/me/messages',
-    qs: { access_token: 'EAAYB5mZATsskBAK1ZAMZCZBBBYZAYgOhZBZBeisYHHTDyfwxhE9S76fDc0YDEjhfdqmU6zF48EEejg4Kfc95ateETgY9O4OFgRqLuQmoNSyjHO0KRLcLK1OZCEwdV7z9bRzjBkq1VI0J2cDi9GZCsZBYzHyEHe6Bt6MW5J6VJxH2wjdAZDZD' },
+    qs: { access_token: 'EAAYB5mZATsskBACBdjfMpAB94jrghicZBhuJafK2go6d4uZCKBPqmAYDMJUuQZCtWRqy37uF1QGbBbos2aWtiLyyEs7aBtLjumrYFQQe2egZCWKNsFej4zVMeIRlWHvaV0kfmgiEEGT14VHIcqFeYN7eZBcJZAsqbJhCbOqx8024AZDZD' },
     method: 'POST',
     json: messageData
 
