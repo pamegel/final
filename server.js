@@ -124,11 +124,7 @@ function receivedPostback(event) {
        sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
   }
   else if (payload == 'fineHere') {
-    sendTextMessage(senderID, "ชือ : "
-    +"\n เวลาทำการ : "
-    +"\n วันเปิดปิด : "
-    +"\n คำอธิบาย : "
-    +"\n แผนที่ : ")
+    fineHere(senderID);
   }else {
     var result = "";
   }
@@ -137,7 +133,7 @@ function receivedPostback(event) {
   // let them know it was successful
   // sendTextMessage(senderID, emoji);
 }
-
+// --------------------ทักทายตอบกลับ---------------------------
 function sendGreetMessage(recipientId, messageText) {
   var messageData = {
     recipient: {
@@ -165,7 +161,8 @@ function sendGreetMessage(recipientId, messageText) {
 
   callSendAPI(messageData);
 }
-
+//-----------------------------------------------------------------------------
+//------------------หาสถานที่---------------------------------------------------
 function findLocations(recipientId, messageText) {
   var messageData = {
   recipient: {
@@ -354,7 +351,8 @@ function findLocations(recipientId, messageText) {
 };
 callSendAPI(messageData);
 }
-
+//-----------------------------------------------------------------------------
+//----------------ตอบกลับ------------------------------------------------------
 function sendTextMessage(recipientId, messageText) {
   var messageData = {
     recipient: {
@@ -367,7 +365,8 @@ function sendTextMessage(recipientId, messageText) {
 
   callSendAPI(messageData);
 }
-
+//------------------------------------------------------------------------------
+//--------ดึงAPIคนที่คุยด้วย---------------------------------------------------------
 function callSendAPI(messageData) {
   request({
     uri: 'https://graph.facebook.com/v2.6/me/messages',
@@ -389,7 +388,35 @@ function callSendAPI(messageData) {
     }
   });
 }
+//------------------------------------------------------------------------------
+//------------ก่อนจาก
+unction sendGreetMessage(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text : "ชือ : "
+          +"\n เวลาทำการ : "
+          +"\n วันเปิดปิด : "
+          +"\n คำอธิบาย : "
+          +"\n แผนที่ : "),
+            buttons: [{
+              type: "postback",
+              title: "อยากหาที่อื่นอีก",
+              payload: "findLocation"
+            }],
+        }
+      }
+    }
+  };
 
+  callSendAPI(messageData);
+}
 /*function sendQuickReply(recipientId) {
   var messageData = {
     recipient: {
