@@ -138,8 +138,8 @@
           setTimeout(function(){  sendTextMessage(senderID, "📣 คำอธิบาย : เป็นชื่อของสถานที่ท่องเที่ยวที่ได้ชื่อว่าเป็น สวรรค์ของคนรักดอกไม้นานาพรรณ ที่นี่มีการนำพันธุ์ไม้ดอกและไม้ประดับหลากหลายชนิด มาจัดแสดงในเรือนกระจกขนาดใหญ่ ");},2000)
           setTimeout(function(){  sendTextMessage(senderID, "🌍 แผนที่ : https://goo.gl/maps/87MRktZm3dA2 ");},2500)
           setTimeout(function(){  fineHeres(senderID);},3000)
-          sendTextMessage(senderID,pic);
-          pic:[
+          sendTextMessage(senderID,elements);
+          elements:[
             {
               title:"",
               item_url:"",
@@ -463,145 +463,7 @@
           callSendAPI(messageData);
         }
         //------------------------------------------------------------------------------
-        //-------------รูปภาพ------------------------------------------------------------
-        function pic(recipientId, messageText) {
-          var messageData = {
-          recipient: {
-            id : recipientId
-          },
-          message:{
-            attachment:{
-              type:"template",
-              payload:{
-                template_type:"generic",
-                elements:[
-                  {
-                    title:"",
-                    item_url:"",
-                    image_url:"http://www.mx7.com/i/1f6/XV3hWB.jpg",
-                    subtitle:" ",
-                    buttons:[
-                      {
-                        type:"postback",
-                        title:"📍 เลือกที่นี้",
-                        payload:"fineHere1"
-                      }]
-                   },
-                   {
-                     title:"อุทยานแห่งชาติเขาใหญ่",
-                     item_url:"",
-                     image_url:"http://www.mx7.com/i/963/tLXLbq.jpg",
-                     subtitle:" ",
-                     buttons:[
-                       {
-                         type:"postback",
-                         title:"📍 เลือกที่นี้",
-                         payload:"fineHere2"
-                       }]
-                    },
-                    {
-                      title:"อุทยานแห่งชาติทับลาน",
-                      item_url:"",
-                      image_url:"http://www.mx7.com/i/115/GscHWV.jpg",
-                      subtitle:" ",
-                      buttons:[
-                        {
-                          type:"postback",
-                          title:"📍 เลือกที่นี้",
-                          payload:"fineHere3"
-                        }]
-                     },
-                     {
-                       title:"โรงพยาบาลอภัยภูเบศร",
-                       item_url:"",
-                       image_url:"http://www.mx7.com/i/938/nytfo7.jpg",
-                       subtitle:" ",
-                       buttons:[
-                         {
-                           type:"postback",
-                           title:"📍 เลือกที่นี้",
-                           payload:"fineHere4"
-                         }]
-                      },
-                      {
-                        title:"The Verona at Tublan",
-                        item_url:"",
-                        image_url:"http://www.mx7.com/i/158/X6K3Pu.jpg",
-                        subtitle:" ",
-                        buttons:[
-                          {
-                            type:"postback",
-                            title:"📍 เลือกที่นี้",
-                            payload:"fineHere5"
-                          }]
-                       },
-                       {
-                         title:"เขาทุ่ง",
-                         item_url:"",
-                         image_url:"http://www.mx7.com/i/b8f/l4MHfg.jpg",
-                         subtitle:" ",
-                         buttons:[
-                           {
-                             type:"postback",
-                             title:"📍 เลือกที่นี้",
-                             payload:"fineHere6"
-                           }]
-                        },
-                        {
-                          title:"แก่งหินเพิง",
-                          item_url:"",
-                          image_url:"http://www.mx7.com/i/d03/8j83vO.jpg",
-                          subtitle:" ",
-                          buttons:[
-                            {
-                              type:"postback",
-                              title:"📍 เลือกที่นี้",
-                              payload:"fineHere7"
-                            }]
-                         },
-                         {
-                           title:"น้ำตกเขาอีโต้",
-                           item_url:"",
-                           image_url:"http://www.mx7.com/i/97f/thdg1i.jpg",
-                           subtitle:" ",
-                           buttons:[
-                             {
-                               type:"postback",
-                               title:"📍 เลือกที่นี้",
-                               payload:"fineHere8"
-                             }]
-                          },
-                          {
-                            title:"อ่างเก็บน้ำจักรพงษ์",
-                            item_url:"",
-                            image_url:"http://www.mx7.com/i/9a7/zp2b7A.jpg",
-                            subtitle:" ",
-                            buttons:[
-                              {
-                                type:"postback",
-                                title:"📍 เลือกที่นี้",
-                                payload:"fineHere9"
-                              }]
-                           },
-                           {
-                             title:"โบราณสถานสระมรกต",
-                             item_url:"",
-                             image_url:"http://www.mx7.com/i/bed/rB7MJv.jpg",
-                             subtitle:" ",
-                             buttons:[
-                               {
-                                 type:"postback",
-                                 title:"📍 เลือกที่นี้",
-                                 payload:"fineHere10"
-                               },
-                               ]
-                            }]
-              }
-            }
-          }
-        };
-        callSendAPI(messageData);
-        }
+
         /*function sendQuickReply(recipientId) {
           var messageData = {
             recipient: {
