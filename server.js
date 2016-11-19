@@ -150,7 +150,7 @@
                item_url:"",
                image_url:"http://www.mx7.com/i/963/tLXLbq.jpg",
                subtitle:" ",
-              }
+             }]
           }
           else if (payload == 'fineHere2') {
           setTimeout(function(){  sendTextMessage(senderID, "📌 ชือ : อุทยานแห่งชาติเขาใหญ่");},500)
