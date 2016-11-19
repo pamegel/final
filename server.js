@@ -126,14 +126,14 @@
       findLocations(senderID);
     }
     else if(payload == 'noThank'){
-         sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ");
+         sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
     }
     else if (payload == 'fineHere1') {
-      sendTextMessage(senderID, "ชือ : ดาษดาแกลเลอรี่"
-      +"\n เวลาทำการ : เวลาเปิดทำการ 09.00-19.00 น "
-      +"\n วันเปิดปิด : เปิดทำการทุกวัน"
-      +"\n คำอธิบาย : ดาษดา แกลเลอรี่ เป็นชื่อของสถานที่ท่องเที่ยวที่ไ้ด้ชื่อว่าเป็น สวรรค์ของคนรักดอกไม้นานาพรรณ เพราะที่นี่มีการนำพันธุ์ไม้ดอกและไม้ประดับหลากหลายชนิด มาจัดแสดงในเรือนกระจกขนาดใหญ่ ในรูปแบบของแกลเลอรี่ดอกไม้ "
-      +"\n แผนที่ :  ");
+      sendTextMessage(senderID, "ชือ : 1"
+      +"\n เวลาทำการ : "
+      +"\n วันเปิดปิด : "
+      +"\n คำอธิบาย : "
+      +"\n แผนที่ : ");
       fineHeres(senderID);
 
     }
@@ -267,126 +267,126 @@
           template_type:"generic",
           elements:[
             {
-           title:"ดาษดาแกลเลอรี่",
-           item_url:"",
-           image_url:"http://www.mx7.com/i/1f6/XV3hWB.jpg",
-           subtitle:" ",
-           buttons:[
-             {
-               type:"postback",
-               title:"เลือกที่นี้",
-               payload:"fineHere1"
-             }]
-          },
-          {
-            title:"อุทยานแห่งชาติเขาใหญ่",
-            item_url:"",
-            image_url:"http://www.mx7.com/i/963/tLXLbq.jpg",
-            subtitle:" ",
-            buttons:[
-              {
-                type:"postback",
-                title:"เลือกที่นี้",
-                payload:"fineHere2"
-              }]
-           },
-           {
-             title:"อุทยานแห่งชาติทับลาน",
-             item_url:"",
-             image_url:"http://www.mx7.com/i/115/GscHWV.jpg",
-             subtitle:" ",
-             buttons:[
-               {
-                 type:"postback",
-                 title:"เลือกที่นี้",
-                 payload:"fineHere3"
-               }]
-            },
-            {
-              title:"โรงพยาบาลอภัยภูเบศร",
+              title:"1",
               item_url:"",
-              image_url:"http://www.mx7.com/i/938/nytfo7.jpg",
+              image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
               subtitle:" ",
               buttons:[
                 {
                   type:"postback",
                   title:"เลือกที่นี้",
-                  payload:"fineHere4"
+                  payload:"fineHere1"
                 }]
              },
              {
-               title:"The Verona at Tublan",
+               title:"2",
                item_url:"",
-               image_url:"http://www.mx7.com/i/158/X6K3Pu.jpg",
+               image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
                subtitle:" ",
                buttons:[
                  {
                    type:"postback",
                    title:"เลือกที่นี้",
-                   payload:"fineHere5"
+                   payload:"fineHere2"
                  }]
               },
               {
-                title:"เขาทุ่ง",
+                title:"3",
                 item_url:"",
-                image_url:"http://www.mx7.com/i/b8f/l4MHfg.jpg",
+                image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
                 subtitle:" ",
                 buttons:[
                   {
                     type:"postback",
                     title:"เลือกที่นี้",
-                    payload:"fineHere6"
+                    payload:"fineHere3"
                   }]
                },
                {
-                 title:"แก่งหินเพิง",
+                 title:"4",
                  item_url:"",
-                 image_url:"http://www.mx7.com/i/d03/8j83vO.jpg",
+                 image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
                  subtitle:" ",
                  buttons:[
                    {
                      type:"postback",
                      title:"เลือกที่นี้",
-                     payload:"fineHere7"
+                     payload:"fineHere4"
                    }]
                 },
                 {
-                  title:"น้ำตกเขาอีโต้",
+                  title:"5",
                   item_url:"",
-                  image_url:"http://www.mx7.com/i/97f/thdg1i.jpg",
+                  image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
                   subtitle:" ",
                   buttons:[
                     {
                       type:"postback",
                       title:"เลือกที่นี้",
-                      payload:"fineHere8"
+                      payload:"fineHere5"
                     }]
                  },
                  {
-                   title:"อ่างเก็บน้ำจักรพงษ์",
+                   title:"6",
                    item_url:"",
-                   image_url:"http://www.mx7.com/i/9a7/zp2b7A.jpg",
+                   image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
                    subtitle:" ",
                    buttons:[
                      {
                        type:"postback",
                        title:"เลือกที่นี้",
-                       payload:"fineHere9"
+                       payload:"fineHere6"
                      }]
                   },
                   {
-                    title:"โบราณสถานสระมรกต",
+                    title:"7",
                     item_url:"",
-                    image_url:"http://www.mx7.com/i/bed/rB7MJv.jpg",
+                    image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
                     subtitle:" ",
                     buttons:[
                       {
                         type:"postback",
                         title:"เลือกที่นี้",
-                        payload:"fineHere10"
-                      },
-                      ]
-                   }]
+                        payload:"fineHere7"
+                      }]
+                   },
+                   {
+                     title:"8",
+                     item_url:"",
+                     image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+                     subtitle:" ",
+                     buttons:[
+                       {
+                         type:"postback",
+                         title:"เลือกที่นี้",
+                         payload:"fineHere8"
+                       }]
+                    },
+                    {
+                      title:"9",
+                      item_url:"",
+                      image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+                      subtitle:" ",
+                      buttons:[
+                        {
+                          type:"postback",
+                          title:"เลือกที่นี้",
+                          payload:"fineHere9"
+                        }]
+                     },
+                     {
+                       title:"10",
+                       item_url:"",
+                       image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+                       subtitle:" ",
+                       buttons:[
+                         {
+                           type:"postback",
+                           title:"เลือกที่นี้",
+                           payload:"fineHere10"
+                         },
+                         ]
+                      }]
         }
       }
     }
