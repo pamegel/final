@@ -461,9 +461,7 @@
             attachment: {
               type: "image",
               payload: {
-                url:"http://www.mx7.com/i/bed/rB7MJv.jpg",
-                url:"http://www.mx7.com/i/bed/rB7MJv.jpg",
-                url:"http://www.mx7.com/i/bed/rB7MJv.jpg"
+                url:"http://img.painaidii.com/images/20140926_3_1411712214_245980.jpg"
               }
             }
           }
