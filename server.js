@@ -482,6 +482,11 @@
                     subtitle:" ",
                   },
                 ]
+              }
+            }
+          }
+        }
+      }
         /*function sendQuickReply(recipientId) {
           var messageData = {
             recipient: {
