@@ -85,7 +85,7 @@
           }*/
 
           if (messageText) {
-            if (messageText === 'hello') {
+            if (messageText === 'hello' && messageText === 'เริ่มต้นการใช้งาน' ) {
               sendTextMessage(senderID, "สวัสดีเหมียววว");
             }
             else if (messageText === 'ขอบใจ'){
@@ -99,6 +99,9 @@
                 sendGreetMessage(senderID);
                 break;
                 case 'ขอบใจ':
+                break;
+                case 'เริ่มต้นการใช้งาน':
+                sendGreetMessage(senderID);
                 break;
               /*case 'quick reply':
                 sendQuickReply(senderID);
@@ -213,7 +216,7 @@
             sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 09.00 - 16.00 น.");
             sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");
             sendTextMessage(senderID, " คำอธิบาย : โบราณสถานสระมรกต ประกอบด้วยรอยพระพุทธบาทคู่ ซึ่งสลักลงไปในพื้นศิลาแลงธรรมชาติลักษณะเหมือนจริง เป็นรอยพระพุทธบาทเก่าแก่ที่สุดในเมืองไทย อายุราวพุทธศตวรรษที่ 11-13");
-            sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/Je2UowcSMLE2");
+            sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/Je2UowcSMLE2 ");
             fineHeres(senderID);
 
           }else {
