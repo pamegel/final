@@ -13,7 +13,7 @@ app.get('/webhook', function(req, res) {
   if (req.query['hub.mode'] === 'subscribe' &&
     req.query['hub.verify_token'] === key) {
     console.log("Validating webhook");
-    res.send(req.query['hub.challenge'])
+    res.send(req.query['hub.challenge']);
   } else {
     console.error("Failed validation. Make sure the validation tokens match.");
     res.sendStatus(403);
@@ -126,7 +126,7 @@ function receivedPostback(event) {
     findLocations(senderID);
   }
   else if(payload == 'noThank'){
-       sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
+       sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ");
   }
   else if (payload == 'fineHere1') {
     sendTextMessage(senderID, "ชือ : ดาษดาแกลเลอรี่"
