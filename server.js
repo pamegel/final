@@ -126,7 +126,7 @@
       findLocations(senderID);
     }
     else if(payload == 'noThank'){
-         sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
+         sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ");
     }
     else if (payload == 'fineHere1') {
       sendTextMessage(senderID, "ชือ : ดาษดาแกลเลอรี่"
