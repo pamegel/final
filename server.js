@@ -132,11 +132,11 @@
                sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
           }
           else if (payload == 'fineHere1') {
-          setTimeout(function(){  sendTextMessage(senderID, " ชือ : ดาษดาแกลเลอรี่");}500)
-          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 09.00-19.00 น.เปิดแกลลอรี่ทุกวัน");}1500)
-          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เปิดทำการทุกวัน");}2000)
-          setTimeout(function(){  sendTextMessage(senderID, " คำอธิบาย : เป็นชื่อของสถานที่ท่องเที่ยวที่ได้ชื่อว่าเป็น สวรรค์ของคนรักดอกไม้นานาพรรณ ที่นี่มีการนำพันธุ์ไม้ดอกและไม้ประดับหลากหลายชนิด มาจัดแสดงในเรือนกระจกขนาดใหญ่ ");}2500)
-          setTimeout(function(){  sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/87MRktZm3dA2 ");}3000)
+          setTimeout(function(){  sendTextMessage(senderID, " ชือ : ดาษดาแกลเลอรี่");},500)
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 09.00-19.00 น.เปิดแกลลอรี่ทุกวัน");},1500)
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เปิดทำการทุกวัน");},2000)
+          setTimeout(function(){  sendTextMessage(senderID, " คำอธิบาย : เป็นชื่อของสถานที่ท่องเที่ยวที่ได้ชื่อว่าเป็น สวรรค์ของคนรักดอกไม้นานาพรรณ ที่นี่มีการนำพันธุ์ไม้ดอกและไม้ประดับหลากหลายชนิด มาจัดแสดงในเรือนกระจกขนาดใหญ่ ");},2500)
+          setTimeout(function(){  sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/87MRktZm3dA2 ");},3000)
             fineHeres(senderID);
           }
           else if (payload == 'fineHere2') {
