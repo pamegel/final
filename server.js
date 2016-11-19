@@ -461,7 +461,7 @@
             attachment: {
               type: "image",
               payload: {
-                image_url:"http://www.mx7.com/i/bed/rB7MJv.jpg"
+                url:"http://www.mx7.com/i/bed/rB7MJv.jpg"
               }
             }
           }
