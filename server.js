@@ -138,7 +138,7 @@
           setTimeout(function(){  sendTextMessage(senderID, "📣 คำอธิบาย : เป็นชื่อของสถานที่ท่องเที่ยวที่ได้ชื่อว่าเป็น สวรรค์ของคนรักดอกไม้นานาพรรณ ที่นี่มีการนำพันธุ์ไม้ดอกและไม้ประดับหลากหลายชนิด มาจัดแสดงในเรือนกระจกขนาดใหญ่ ");},2000)
           setTimeout(function(){  sendTextMessage(senderID, "🌍 แผนที่ : https://goo.gl/maps/87MRktZm3dA2 ");},2500)
           setTimeout(function(){  fineHeres(senderID);},3000)
-          setTimeout(function(){  pic(senderID);},3200)
+          
 
           }
           else if (payload == 'fineHere2') {
@@ -450,43 +450,7 @@
 
           callSendAPI(messageData);
         }
-        //------------------------------------------------------------------------------
-        //-----รูป-------------------------------------------------------------------
-        function pic(recipientId, messageText) {
-          var messageData = {
-          recipient: {
-            id : recipientId
-          },
-          message:{
-            attachment:{
-              type:"template",
-              payload:{
-                template_type:"generic",
-                elements:[
-                  {
-                    title:"",
-                    item_url:"",
-                    image_url:"http://www.mx7.com/i/1f6/XV3hWB.jpg",
-                    subtitle:" ",
-                  },
-                  {
-                    title:"",
-                    item_url:"",
-                    image_url:"http://www.mx7.com/i/1f6/XV3hWB.jpg",
-                    subtitle:" ",
-                  },
-                  {
-                    title:"",
-                    item_url:"",
-                    image_url:"http://www.mx7.com/i/1f6/XV3hWB.jpg",
-                    subtitle:" ",
-                  },
-                ]
-              }
-            }
-          }
-        }
-      }
+       
         /*function sendQuickReply(recipientId) {
           var messageData = {
             recipient: {
