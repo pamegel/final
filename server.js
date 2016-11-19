@@ -70,6 +70,7 @@
           var messageText = message.text;
           var messageAttachments = message.attachments;
           var quickReply = message.quick_reply;
+          var messageImage = message.image;
 
          /* if (isEcho) {
             // Just logging message echoes to console
@@ -137,8 +138,8 @@
           setTimeout(function(){  sendTextMessage(senderID, "📅 วันเปิดปิด : เปิดทำการทุกวัน");},1500)
           setTimeout(function(){  sendTextMessage(senderID, "📣 คำอธิบาย : เป็นชื่อของสถานที่ท่องเที่ยวที่ได้ชื่อว่าเป็น สวรรค์ของคนรักดอกไม้นานาพรรณ ที่นี่มีการนำพันธุ์ไม้ดอกและไม้ประดับหลากหลายชนิด มาจัดแสดงในเรือนกระจกขนาดใหญ่ ");},2000)
           setTimeout(function(){  sendTextMessage(senderID, "🌍 แผนที่ : https://goo.gl/maps/87MRktZm3dA2 ");},2500)
-          setTimeout(function(){  fineHeres(senderID);},3000)
-          setTimeout(function(){ sendImageMessage(senderID);},3500)
+          setTimeout(function(){  fineHeres(senderID, image_url : "http://img.painaidii.com/images/20140926_3_1411712214_245980.jpg");},3000)
+
 
           }
           else if (payload == 'fineHere2') {
@@ -461,7 +462,7 @@
             attachment: {
               type: "image",
               payload: {
-               url:"http://img.painaidii.com/images/20140926_3_1411712214_245980.jpg"
+                url: messageImage
               }
             }
           }
