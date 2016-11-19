@@ -461,7 +461,7 @@
             attachment: {
               type: "image",
               payload: {
-                image_url:"http://img.painaidii.com/images/20140926_3_1411712214_245980.jpg"
+               url:"http://img.painaidii.com/images/20140926_3_1411712214_245980.jpg"
               }
             }
           }
