@@ -13,7 +13,7 @@ app.get('/webhook', function(req, res) {
   if (req.query['hub.mode'] === 'subscribe' &&
     req.query['hub.verify_token'] === key) {
     console.log("Validating webhook");
-    res.send(req.query['hub.challenge']);
+    res.send(req.query['hub.challenge'])
   } else {
     console.error("Failed validation. Make sure the validation tokens match.");
     res.sendStatus(403);
@@ -126,14 +126,14 @@ function receivedPostback(event) {
     findLocations(senderID);
   }
   else if(payload == 'noThank'){
-       sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ");
+       sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
   }
   else if (payload == 'fineHere1') {
     sendTextMessage(senderID, "ชือ : ดาษดาแกลเลอรี่"
     +"\n เวลาทำการ : เวลาเปิดทำการ 09.00-19.00 น.เปิดแกลลอรี่ทุกวัน"
     +"\n วันเปิดปิด : เปิดทำการทุกวัน"
     +"\n คำอธิบาย : ดาษดา แกลเลอรี่ เป็นชื่อของสถานที่ท่องเที่ยวที่ไ้ด้ชื่อว่าเป็น สวรรค์ของคนรักดอกไม้นานาพรรณ เพราะที่นี่มีการนำพันธุ์ไม้ดอกและไม้ประดับหลากหลายชนิด มาจัดแสดงในเรือนกระจกขนาดใหญ่ ในรูปแบบของแกลเลอรี่ดอกไม้ "
-    +"\n แผนที่ : https://goo.gl/maps/87MRktZm3dA2");
+    +"\n แผนที่ : ");
     fineHeres(senderID);
   }
   else if (payload == 'fineHere2') {
