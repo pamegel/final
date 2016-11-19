@@ -265,7 +265,8 @@
         type:"template",
         payload:{
           template_type:"generic",
-          {
+          elements:[
+            {
            title:"ดาษดาแกลเลอรี่",
            item_url:"",
            image_url:"http://www.mx7.com/i/1f6/XV3hWB.jpg",
