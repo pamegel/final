@@ -85,7 +85,7 @@
           }*/
 
           if (messageText) {
-            if (messageText === 'hello' && messageText === 'เริ่มต้นการใช้งาน' ) {
+            if (messageText === 'hello' ) {
               sendTextMessage(senderID, "สวัสดีเหมียววว");
             }
             else if (messageText === 'ขอบใจ'){
@@ -99,9 +99,6 @@
                 sendGreetMessage(senderID);
                 break;
                 case 'ขอบใจ':
-                break;
-                case 'เริ่มต้นการใช้งาน':
-                sendGreetMessage(senderID);
                 break;
               /*case 'quick reply':
                 sendQuickReply(senderID);
@@ -128,15 +125,18 @@
           if(payload == 'findLocation'){
             findLocations(senderID);
           }
+          else if(payload == 'USER_DEFINED_PAYLOAD'){
+               sendTextMessage(senderID, "ลองพิมพ์คำว่า hello สิ")
+          }
           else if(payload == 'noThank'){
                sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
           }
           else if (payload == 'fineHere1') {
-            sendTextMessage(senderID, " ชือ : ดาษดาแกลเลอรี่");
-            sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 09.00-19.00 น.เปิดแกลลอรี่ทุกวัน");
-            sendTextMessage(senderID, " เวลาทำการ : เปิดทำการทุกวัน");
-            sendTextMessage(senderID, " คำอธิบาย : เป็นชื่อของสถานที่ท่องเที่ยวที่ได้ชื่อว่าเป็น สวรรค์ของคนรักดอกไม้นานาพรรณ ที่นี่มีการนำพันธุ์ไม้ดอกและไม้ประดับหลากหลายชนิด มาจัดแสดงในเรือนกระจกขนาดใหญ่ ");
-            sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/87MRktZm3dA2 ");
+          setTimeout(function(){  sendTextMessage(senderID, " ชือ : ดาษดาแกลเลอรี่");}1000)
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 09.00-19.00 น.เปิดแกลลอรี่ทุกวัน");}2000)
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เปิดทำการทุกวัน");}3000)
+          setTimeout(function(){  sendTextMessage(senderID, " คำอธิบาย : เป็นชื่อของสถานที่ท่องเที่ยวที่ได้ชื่อว่าเป็น สวรรค์ของคนรักดอกไม้นานาพรรณ ที่นี่มีการนำพันธุ์ไม้ดอกและไม้ประดับหลากหลายชนิด มาจัดแสดงในเรือนกระจกขนาดใหญ่ ");}4000)
+          setTimeout(function(){  sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/87MRktZm3dA2 ");}5000)
             fineHeres(senderID);
           }
           else if (payload == 'fineHere2') {
