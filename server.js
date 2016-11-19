@@ -133,91 +133,91 @@
           }
           else if (payload == 'fineHere1') {
           setTimeout(function(){  sendTextMessage(senderID, " ชือ : ดาษดาแกลเลอรี่");},500)
-          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 09.00-19.00 น.เปิดแกลลอรี่ทุกวัน");},1500)
-          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เปิดทำการทุกวัน");},2000)
-          setTimeout(function(){  sendTextMessage(senderID, " คำอธิบาย : เป็นชื่อของสถานที่ท่องเที่ยวที่ได้ชื่อว่าเป็น สวรรค์ของคนรักดอกไม้นานาพรรณ ที่นี่มีการนำพันธุ์ไม้ดอกและไม้ประดับหลากหลายชนิด มาจัดแสดงในเรือนกระจกขนาดใหญ่ ");},2500)
-          setTimeout(function(){  sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/87MRktZm3dA2 ");},3000)
-            fineHeres(senderID);
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 09.00-19.00 น.เปิดแกลลอรี่ทุกวัน");},1000)
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เปิดทำการทุกวัน");},1500)
+          setTimeout(function(){  sendTextMessage(senderID, " คำอธิบาย : เป็นชื่อของสถานที่ท่องเที่ยวที่ได้ชื่อว่าเป็น สวรรค์ของคนรักดอกไม้นานาพรรณ ที่นี่มีการนำพันธุ์ไม้ดอกและไม้ประดับหลากหลายชนิด มาจัดแสดงในเรือนกระจกขนาดใหญ่ ");},2000)
+          setTimeout(function(){  sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/87MRktZm3dA2 ");},2500)
+          setTimeout(function(){  fineHeres(senderID);},3000)
           }
           else if (payload == 'fineHere2') {
-            sendTextMessage(senderID, " ชือ : อุทยานแห่งชาติเขาใหญ่");
-            sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 08.00 - 17.00 น.");
-            sendTextMessage(senderID, " เวลาทำการ : เปิดทำการทุกวัน");
-            sendTextMessage(senderID, " คำอธิบาย : นับว่าเป็นแหล่งกำเนิดของต้นน้ำลำธารที่ทำให้เกิดปรากฏการณ์ธรรมชาติซึ่งมีน้ำตกน้อยใหญ่เกิดขึ้นหลายแห่งในพื้นที่อุทยานแห่งชาติเขาใหญ่ ซึ่งสำรวจพบและทำเส้นทางเดินเท้าไปถึงแล้วประมาณ 30 แห่ง");
-            sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/Hk8TdcS24rE2 ");
-            fineHeres(senderID);
+          setTimeout(function(){  sendTextMessage(senderID, " ชือ : อุทยานแห่งชาติเขาใหญ่");},500)
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 08.00 - 17.00 น.");},1000)
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เปิดทำการทุกวัน");},1500)
+          setTimeout(function(){  sendTextMessage(senderID, " คำอธิบาย : นับว่าเป็นแหล่งกำเนิดของต้นน้ำลำธารที่ทำให้เกิดปรากฏการณ์ธรรมชาติซึ่งมีน้ำตกน้อยใหญ่เกิดขึ้นหลายแห่งในพื้นที่อุทยานแห่งชาติเขาใหญ่ ซึ่งสำรวจพบและทำเส้นทางเดินเท้าไปถึงแล้วประมาณ 30 แห่ง");},2000)
+          setTimeout(function(){  sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/Hk8TdcS24rE2 ");},2500)
+          setTimeout(function(){  fineHeres(senderID);},3000)
 
           }
           else if (payload == 'fineHere3') {
-            sendTextMessage(senderID, " ชือ : อุทยานแห่งชาติทับลาน");
-            sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 08.00 - 18.00 น.");
-            sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");
-            sendTextMessage(senderID, " คำอธิบาย : อุทยานแห่งชาติทับลาน จ.ปราจีนบุรี สถานที่ท่องเที่ยวที่โอบล้อมไปด้วยขุนเขา และยังคงความอุดมสมบูรณ์ที่รอให้นักท่องเที่ยวทั่วทุกสารทิศไปสัมผัสความงดงาม");
-            sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/suDQDLQCgQD2 ");
-            fineHeres(senderID);
+          setTimeout(function(){  sendTextMessage(senderID, " ชือ : อุทยานแห่งชาติทับลาน");},500)
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 08.00 - 18.00 น.");},1000)
+          setTimeout(function(){  sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");},1500)
+          setTimeout(function(){  sendTextMessage(senderID, " คำอธิบาย : อุทยานแห่งชาติทับลาน จ.ปราจีนบุรี สถานที่ท่องเที่ยวที่โอบล้อมไปด้วยขุนเขา และยังคงความอุดมสมบูรณ์ที่รอให้นักท่องเที่ยวทั่วทุกสารทิศไปสัมผัสความงดงาม");},2000)
+          setTimeout(function(){  sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/suDQDLQCgQD2 ");},2500)
+          setTimeout(function(){  fineHeres(senderID);},3000)
 
           }
           else if (payload == 'fineHere4') {
-            sendTextMessage(senderID, " ชือ : โรงพยาบาลอภัยภูเบศร");
-            sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 08.30-17.00 น.");
-            sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");
-            sendTextMessage(senderID, " คำอธิบาย : โรงพยาบาลเแห่งนี้ มีขีดความสามารถในการให้การบริการทางการแพทย์ในระดับสูง แต่ต่างจากรพ.อื่นตรงที่มีการผสมผสานการใช้สมุนไพรและการแพทย์แผนไทยเข้าสู่ระบบบริการสุขภาพของโรงพยาบาล");
-            sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/JkFqKagn5ZH2 ");
-            fineHeres(senderID);
+          setTimeout(function(){  sendTextMessage(senderID, " ชือ : โรงพยาบาลอภัยภูเบศร");},500)
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 08.30-17.00 น.");},1000)
+          setTimeout(function(){  sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");},1500)
+          setTimeout(function(){  sendTextMessage(senderID, " คำอธิบาย : โรงพยาบาลเแห่งนี้ มีขีดความสามารถในการให้การบริการทางการแพทย์ในระดับสูง แต่ต่างจากรพ.อื่นตรงที่มีการผสมผสานการใช้สมุนไพรและการแพทย์แผนไทยเข้าสู่ระบบบริการสุขภาพของโรงพยาบาล");},2000)
+          setTimeout(function(){  sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/JkFqKagn5ZH2 ");},2500)
+          setTimeout(function(){  fineHeres(senderID);},3000)
 
           }
           else if (payload == 'fineHere5') {
-            sendTextMessage(senderID, " ชือ : The Verona at Tublan");
-            sendTextMessage(senderID, " เวลาทำการ :  เวลาเปิดทำการ 10.00-20.00 น.");
-            sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");
-            sendTextMessage(senderID, " คำอธิบาย : ช้อปชิวๆ มุมถ่ายรูปคลูๆ ไม่ว่าจะมากับครอบครัว คนรู้ใจหรือจะเดินเล่นติสๆ คนเดียวก็เข้าที รวมถึงอร่อยกับร้านอาหารสไตท์ปิ้ง-ย่าง-ชาบู ลานเบียร์ และอื่นๆอีกมากมากมาย พร้อมฟังดนตรีสดๆได้เลย");
-            sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/vhams5WeQZR2 ");
-            fineHeres(senderID);
+          setTimeout(function(){  sendTextMessage(senderID, " ชือ : The Verona at Tublan");},500)
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 10.00-20.00 น.");},1000)
+          setTimeout(function(){  sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");},1500)
+          setTimeout(function(){  sendTextMessage(senderID, " คำอธิบาย : ช้อปชิวๆ มุมถ่ายรูปคลูๆ ไม่ว่าจะมากับครอบครัว คนรู้ใจหรือจะเดินเล่นติสๆ คนเดียวก็เข้าที รวมถึงอร่อยกับร้านอาหารสไตท์ปิ้ง-ย่าง-ชาบู ลานเบียร์ และอื่นๆอีกมากมากมาย พร้อมฟังดนตรีสดๆได้เลย");},2000)
+          setTimeout(function(){  sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/vhams5WeQZR2 ");},2500)
+          setTimeout(function(){  fineHeres(senderID);},3000)
 
           }
           else if (payload == 'fineHere6') {
-            sendTextMessage(senderID, " ชือ : เขาทุ่ง");
-            sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 06.00-18.00 น.");
-            sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");
-            sendTextMessage(senderID, " คำอธิบาย : ตั้งอยู่ในเขตอุทยานแห่งชาติเขาใหญ่ ด้านอำเภอนาดี ได้รับฉายาว่าเป็นภูกระดึงแห่งภาคตะวันออก โดยรอบบริเวณบนเขาทุ่งมีลักษณะเป็นที่ราบทุ่งหญ้า เมื่อขึ้นไปยังบริเวณดังกล่าวจะสามารถมองเห็นวิวทิวทัศน์ที่สวยงาม");
-            sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/wL2RhapFSzM2");
-            fineHeres(senderID);
+          setTimeout(function(){  sendTextMessage(senderID, " ชือ : เขาทุ่ง");},500)
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 06.00-18.00 น.");},1000)
+          setTimeout(function(){  sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");},1500)
+          setTimeout(function(){  sendTextMessage(senderID, " คำอธิบาย : ตั้งอยู่ในเขตอุทยานแห่งชาติเขาใหญ่ ด้านอำเภอนาดี ได้รับฉายาว่าเป็นภูกระดึงแห่งภาคตะวันออก โดยรอบบริเวณบนเขาทุ่งมีลักษณะเป็นที่ราบทุ่งหญ้า เมื่อขึ้นไปยังบริเวณดังกล่าวจะสามารถมองเห็นวิวทิวทัศน์ที่สวยงาม");},2000)
+          setTimeout(function(){  sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/wL2RhapFSzM2");},2500)
+          setTimeout(function(){  fineHeres(senderID);},3000)
 
           }
           else if (payload == 'fineHere7') {
-            sendTextMessage(senderID, " ชือ : แก่งหินเพิง");
-            sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 08.00 - 17.00 น.");
-            sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");
-            sendTextMessage(senderID, " คำอธิบาย : เป็นเส้นทางล่องแก่งที่มีระดับความยากอยู่ที่ 3-5 บนระยะทางรวมกว่า 4.5 กิโลเมตร มีลานหินหักที่เทตัวลงมาทำให้เกิดเป็นวังน้ำวนไหลเชี่ยวผ่านแก่งหินต่างๆ ระยะทางกว่า 200 เมตร");
-            sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/ZCHmc5QTAXM2");
-            fineHeres(senderID);
+          setTimeout(function(){  sendTextMessage(senderID, " ชือ : แก่งหินเพิง");},500)
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 08.00 - 17.00 น.");},1000)
+          setTimeout(function(){  sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");},1500)
+          setTimeout(function(){  sendTextMessage(senderID, " คำอธิบาย : เป็นเส้นทางล่องแก่งที่มีระดับความยากอยู่ที่ 3-5 บนระยะทางรวมกว่า 4.5 กิโลเมตร มีลานหินหักที่เทตัวลงมาทำให้เกิดเป็นวังน้ำวนไหลเชี่ยวผ่านแก่งหินต่างๆ ระยะทางกว่า 200 เมตร");},2000)
+          setTimeout(function(){  sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/ZCHmc5QTAXM2");},2500)
+          setTimeout(function(){  fineHeres(senderID);},3000)
 
           }
           else if (payload == 'fineHere8') {
-            sendTextMessage(senderID, " ชือ : น้ำตกเขาอีโต้");
-            sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 08.00 - 16.30 น.");
-            sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");
-            sendTextMessage(senderID, " คำอธิบาย : เป็นลำธารน้ำที่ไหลผ่านโขดหินน้อยใหญเป็นชั้นๆ ซึ่งคุณสามารถเข้าไปนั่งพักผ่อนตามแนวโขดหินของตัวน้ำตก เพื่อสัมผัสกับสายน้ำที่ไหลผ่านตลอดแนวหิน");
-            sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/yhfakNcgeyG2");
-            fineHeres(senderID);
+          setTimeout(function(){  sendTextMessage(senderID, " ชือ : น้ำตกเขาอีโต้");},500)
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 08.00 - 16.30 น.");},1000)
+          setTimeout(function(){  sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");},1500)
+          setTimeout(function(){  sendTextMessage(senderID, " คำอธิบาย : เป็นลำธารน้ำที่ไหลผ่านโขดหินน้อยใหญเป็นชั้นๆ ซึ่งคุณสามารถเข้าไปนั่งพักผ่อนตามแนวโขดหินของตัวน้ำตก เพื่อสัมผัสกับสายน้ำที่ไหลผ่านตลอดแนวหิน");},2000)
+          setTimeout(function(){  sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/yhfakNcgeyG2");},2500)
+          setTimeout(function(){  fineHeres(senderID);},3000)
 
           }
           else if (payload == 'fineHere9') {
-            sendTextMessage(senderID, " ชือ : อ่างเก็บน้ำจักรพงษ์");
-            sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 08.30 - 16.30 น.");
-            sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");
-            sendTextMessage(senderID, " คำอธิบาย : อยู่บริเวณเชิงเขาอีโต้ จากปากทางเข้าอ่างเก็บน้ำให้เลี้ยวซ้ายจะมีถนนขึ้นไปจนถึงยอดเขาเพื่อชมทัศนียภาพโดยรอบ ระยะทางประมาณ 11 กิโลเมตร");
-            sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/SHBzmQmkdyM2");
-            fineHeres(senderID);
+          setTimeout(function(){  sendTextMessage(senderID, " ชือ : อ่างเก็บน้ำจักรพงษ์");},500)
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 08.30 - 16.30 น.");},1000)
+          setTimeout(function(){  sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");},1500)
+          setTimeout(function(){  sendTextMessage(senderID, " คำอธิบาย : อยู่บริเวณเชิงเขาอีโต้ จากปากทางเข้าอ่างเก็บน้ำให้เลี้ยวซ้ายจะมีถนนขึ้นไปจนถึงยอดเขาเพื่อชมทัศนียภาพโดยรอบ ระยะทางประมาณ 11 กิโลเมตร");},2000)
+          setTimeout(function(){  sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/SHBzmQmkdyM2");},2500)
+          setTimeout(function(){  fineHeres(senderID);},3000)
 
           }
           else if (payload == 'fineHere10') {
-            sendTextMessage(senderID, " ชือ : โบราณสถานสระมรกต");
-            sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 09.00 - 16.00 น.");
-            sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");
-            sendTextMessage(senderID, " คำอธิบาย : โบราณสถานสระมรกต ประกอบด้วยรอยพระพุทธบาทคู่ ซึ่งสลักลงไปในพื้นศิลาแลงธรรมชาติลักษณะเหมือนจริง เป็นรอยพระพุทธบาทเก่าแก่ที่สุดในเมืองไทย อายุราวพุทธศตวรรษที่ 11-13");
-            sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/Je2UowcSMLE2 ");
-            fineHeres(senderID);
+          setTimeout(function(){  sendTextMessage(senderID, " ชือ : โบราณสถานสระมรกต");},500)
+          setTimeout(function(){  sendTextMessage(senderID, " เวลาทำการ : เวลาเปิดทำการ 09.00 - 16.00 น.");},1000)
+          setTimeout(function(){  sendTextMessage(senderID, " วันเปิดปิด : เปิดทำการทุกวัน");},1500)
+          setTimeout(function(){  sendTextMessage(senderID, " คำอธิบาย : โบราณสถานสระมรกต ประกอบด้วยรอยพระพุทธบาทคู่ ซึ่งสลักลงไปในพื้นศิลาแลงธรรมชาติลักษณะเหมือนจริง เป็นรอยพระพุทธบาทเก่าแก่ที่สุดในเมืองไทย อายุราวพุทธศตวรรษที่ 11-13");},2000)
+          setTimeout(function(){  sendTextMessage(senderID, " แผนที่ : https://goo.gl/maps/Je2UowcSMLE2 ");},2500)
+          setTimeout(function(){  fineHeres(senderID);},3000)
 
           }else {
             var result = "";
