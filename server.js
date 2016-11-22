@@ -108,7 +108,7 @@
                 break;
                 case 'ขอบใจ':
                 break;
-                case :'ควย':
+                case 'ควย':
                 break;
                 case 'ฟวย':
                 break;
