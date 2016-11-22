@@ -113,7 +113,7 @@
                 sendTextMessage(senderID, "พิมพ์อะไรแมวไม่รู้เรื่อง :p \n ถ้าอยากให้ช่วยคุณต้องพิมพ์ \"hello\" สิ \nหรือถ้าอยากขอบคุณละก็ พิมพ์ \"ขอบใจ\" " );
             }
           } else if (messageAttachments) {
-            sendTextMessage(senderID, "Message with attachment received");
+            sendTextMessage(senderID, "จุ๊บๆ");
           }
         }
 
