@@ -106,21 +106,21 @@
                 case 'Hello':
                 sendGreetMessage(senderID);
                 break;
-                case 'ขอบใจ':
+                case 'ขอบใจ' :
                 break;
-                case 'ควย':
+                case 'ควย' :
                 break;
-                case 'ฟวย':
+                case 'ฟวย' :
                 break;
-                case 'สัส':
+                case 'สัส' :
                 break;
-                case 'พ่องตาย':
+                case 'พ่องตาย' :
                 break;
-                case 'พ่อมึงตาย':
+                case 'พ่อมึงตาย' :
                 break;
-                case 'แม่มึงตาย':
+                case 'แม่มึงตาย' :
                 break;
-                case 'แม่งตาย':
+                case 'แม่งตาย' :
                 break;
               /*case 'quick reply':
                 sendQuickReply(senderID);
