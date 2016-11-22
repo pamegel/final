@@ -91,7 +91,9 @@
             else if (messageText === 'ขอบใจ'){
               sendTextMessage(senderID, "ยินดีช่วยเหมียวว <3");
             }
-
+             else if (messageText === 'ควย' || messageText === 'ฟวย' || messageText === 'สัส' || messageText === 'พ่องตาย'|| messageText === 'พ่อมึงตาย' || messageText === 'แม่มึงตาย' || messageText === 'แม่งตาย' ){
+             sendTextMessage(senderID, " 👎 สุภาพหน่อย ");
+              }
             // If we receive a text message, check to see if it matches a keyword
             // and send back the example. Otherwise, just echo the text we received.
             switch (messageText) {
@@ -105,6 +107,20 @@
                 sendGreetMessage(senderID);
                 break;
                 case 'ขอบใจ':
+                break;
+                case :'ควย':
+                break;
+                case 'ฟวย':
+                break;
+                case 'สัส':
+                break;
+                case 'พ่องตาย':
+                break;
+                case 'พ่อมึงตาย':
+                break;
+                case 'แม่มึงตาย':
+                break;
+                case 'แม่งตาย':
                 break;
               /*case 'quick reply':
                 sendQuickReply(senderID);
@@ -218,9 +234,6 @@
           setTimeout(function(){  sendTextMessage(senderID, "📣 คำอธิบาย : โบราณสถานสระมรกต ประกอบด้วยรอยพระพุทธบาทคู่ ซึ่งสลักลงไปในพื้นศิลาแลงธรรมชาติลักษณะเหมือนจริง เป็นรอยพระพุทธบาทเก่าแก่ที่สุดในเมืองไทย อายุราวพุทธศตวรรษที่ 11-13");},2000)
           setTimeout(function(){  sendTextMessage(senderID, "🌍 แผนที่ : https://goo.gl/maps/Je2UowcSMLE2 ");},2500)
           setTimeout(function(){  fineHeres(senderID);},3000)
-          }
-           else if (messageText === 'ควย' || messageText === 'ฟวย' || messageText === 'สัส' || messageText === 'พ่องตาย'|| messageText === 'พ่อมึงตาย' || messageText === 'แม่มึงตาย' || messageText === 'แม่งตาย' ){
-              sendTextMessage(senderID, " 👎 สุภาพหน่อย ");
           }else {
             var result = "";
           }
