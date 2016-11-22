@@ -86,7 +86,7 @@
           }*/
 
           if (messageText) {
-            if (messageText === 'hello' || messageText === 'Hello' || messageText === 'HELLO'  ) {
+            if (messageText === 'HELLO'  ) {
               sendTextMessage(senderID, "สวัสดีเหมียววว");
             }
             else if (messageText === 'ขอบใจ'){
@@ -96,12 +96,6 @@
             // If we receive a text message, check to see if it matches a keyword
             // and send back the example. Otherwise, just echo the text we received.
             switch (messageText) {
-              case 'hello':
-                sendGreetMessage(senderID);
-                break;
-                case 'Hello':
-                sendGreetMessage(senderID);
-                break;
                 case 'HELLO':
                 sendGreetMessage(senderID);
                 break;
