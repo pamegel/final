@@ -67,7 +67,8 @@
           var metadata = message.metadata;
 
           // You may get a text or attachment but not both
-          var messageText = message.text;
+          var message = message.text;
+          var  messageText = message.toUpperCase();
           var messageAttachments = message.attachments;
           var quickReply = message.quick_reply;
 
