@@ -85,7 +85,7 @@
           }*/
 
           if (messageText) {
-            if (messageText === 'HELLO'  ) {
+            if (messageText === 'HELLO' || messageText === 'hello' || messageText === 'Hello' ) {
               sendTextMessage(senderID, "สวัสดีเหมียววว");
             }
             else if (messageText === 'ขอบใจ'){
@@ -96,6 +96,12 @@
             // and send back the example. Otherwise, just echo the text we received.
             switch (messageText) {
                 case 'HELLO':
+                sendGreetMessage(senderID);
+                break;
+                case 'hello':
+                sendGreetMessage(senderID);
+                break;
+                case 'Hello':
                 sendGreetMessage(senderID);
                 break;
                 case 'ขอบใจ':
