@@ -88,7 +88,7 @@
             if (messageText === 'HELLO' || messageText === 'hello' || messageText === 'Hello' ) {
               sendTextMessage(senderID, "สวัสดีเหมียววว");
             }
-            else if (messageText === 'ขอบใจ'){
+            else if (messageText === 'ขอบใจ' || messageText === 'ขอบคุณ' ){
               sendTextMessage(senderID, "ยินดีช่วยเหมียวว <3");
             }
              else if (messageText === 'ควย' || messageText === 'ฟวย' || messageText === 'สัส' || messageText === 'พ่องตาย'|| messageText === 'พ่อมึงตาย' || messageText === 'แม่มึงตาย' || messageText === 'แม่งตาย' ){
@@ -116,6 +116,8 @@
                 case 'ฟวย' :
                 break;
                 case 'สัส' :
+                break;
+                case 'ขอบคุณ' :
                 break;
                 case 'พ่องตาย' :
                 break;
