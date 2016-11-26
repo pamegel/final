@@ -490,7 +490,7 @@
                 type: "template",
                 payload: {
                   template_type: "button",
-                  text : "",
+                  text : "ไม่อยากให้ช่วยจริงเหรอ :3 ",
                     buttons: [{
                       type: "postback",
                       title: "🔎 ช่วยหน่อยสิ",
