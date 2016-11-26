@@ -159,6 +159,7 @@
           }
           else if(payload == 'noThank'){
                sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ")
+               NoThank(senderID)
           }
           else if (payload == 'fineHere1') {
           setTimeout(function(){  sendTextMessage(senderID, "📌 ชือ : ดาษดาแกลเลอรี่");},500)
@@ -470,6 +471,29 @@
                     buttons: [{
                       type: "postback",
                       title: "🔎 อยากหาที่อื่นอีก",
+                      payload: "findLocation"
+                    }],
+                }
+              }
+            }
+          };
+
+          callSendAPI(messageData);
+        }
+function NoThank(recipientId, messageText) {
+          var messageData = {
+            recipient: {
+              id: recipientId
+            },
+            message: {
+              attachment: {
+                type: "template",
+                payload: {
+                  template_type: "button",
+                  text : "",
+                    buttons: [{
+                      type: "postback",
+                      title: "🔎 ช่วยหน่อยสิ",
                       payload: "findLocation"
                     }],
                 }
