@@ -133,7 +133,8 @@
                 sendQuickReply(senderID);
                 break;*/
               default:
-                sendTextMessage(senderID, "พิมพ์อะไรแมวไม่รู้เรื่อง :p \n ถ้าอยากให้ช่วยคุณต้องพิมพ์ \"hello\" สิ \nหรือถ้าอยากขอบคุณละก็ พิมพ์ \"ขอบใจ\" " );
+                sendTextMessage(senderID, "พิมพ์อะไรแมวไม่รู้เรื่อง :p \n เลือกเมนูเอาข้างล่างละกัน " );
+                sendGreetMessage(senderID)
             }
           } else if (messageAttachments) {
             sendTextMessage(senderID, "จุ๊บๆ");
