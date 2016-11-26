@@ -156,7 +156,8 @@
             findLocations(senderID);
           }
           else if(payload == 'USER_DEFINED_PAYLOAD'){
-               sendTextMessage(senderID, "ลองพิมพ์คำว่า hello สิ")
+               sendTextMessage(senderID, "สวัสดีเหมียววว ")
+               sendGreetMessage(senderID)
           }
           else if(payload == 'noThank'){
                sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ");
