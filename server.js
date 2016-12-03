@@ -167,7 +167,7 @@ function receivedPostback(event) {
   else if (payload == 'find1' || payload == 'find2' || payload == 'find3' || payload == 'find4' || payload == 'find5' || payload == 'find6' || payload == 'find7' || payload == 'find8' || payload == 'find9' || payload == 'find10' ) {
    sendTextMessage(senderID,"test")
     for(var i = 0; i < data.bigdata.length; i++) {
-    var obj = data.bigdata.payload[i];
+    var obj = data.bigdata.payload1;
      setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
      setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
      setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
