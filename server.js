@@ -255,9 +255,7 @@
           setTimeout(function(){  sendTextMessage(senderID, "🌍 แผนที่ : https://goo.gl/maps/Je2UowcSMLE2 ");},2500)
           setTimeout(function(){  sendTextMessage(senderID, "☎️ ติดต่อเพิ่มเติม \n 037-276-084 ");},3000)
           setTimeout(function(){  fineHeres(senderID);},3500)
-          }
-
-           ////////////////////////////////////////////////////////////////////////////////////////////
+     
           }else {
             var result = "";
           }
