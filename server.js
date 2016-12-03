@@ -166,7 +166,7 @@ function receivedPostback(event) {
   }///////////////////////////////////////////////////////////////////////////////////////////////
   else if (payload >= 1 && payload <= 10 ) {
    sendTextMessage(senderID,"test")
-      var obj = data.bigdata[payload];
+      var obj = data.bigdata[0];
      setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
      setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
      setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
