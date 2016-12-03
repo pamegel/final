@@ -164,7 +164,7 @@ function receivedPostback(event) {
        sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ");
        NoThank(senderID)
   }///////////////////////////////////////////////////////////////////////////////////////////////
-  else if (payload == '1' || payload == '2' || payload == '3' || payload == '4' || payload == '5' || payload == '6' || payload == '7' || payload == '8' || payload == '9' || payload == '10' ) {
+  else if (payload >= 1 && payload <= 10 ) {
    sendTextMessage(senderID,"test")
       var obj = data.bigdata[payload];
      setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
