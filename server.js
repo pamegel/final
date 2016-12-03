@@ -166,13 +166,13 @@ function receivedPostback(event) {
   }///////////////////////////////////////////////////////////////////////////////////////////////
   else if (payload >= 1 && payload <= 10 ) {
    sendTextMessage(senderID,"test")
-      var obj = data.bigdata[0];
-     setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail4.text )}, 2000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail5.text )}, 2500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail6.text )}, 3000)
+      //var obj = data.bigdata;
+     setTimeout(function() { sendTextMessage(senderID, data.bigdata[payload].detail1.text )}, 500)
+     setTimeout(function() { sendTextMessage(senderID, data.bigdata[payload].detail2.text )}, 1000)
+     setTimeout(function() { sendTextMessage(senderID, data.bigdata[payload].detail3.text )}, 1500)
+     setTimeout(function() { sendTextMessage(senderID, data.bigdata[payload].detail4.text )}, 2000)
+     setTimeout(function() { sendTextMessage(senderID, data.bigdata[payload].detail5.text )}, 2500)
+     setTimeout(function() { sendTextMessage(senderID, data.bigdata[payload].detail6.text )}, 3000)
                
    ////////////////////////////////////////////////////////////////////////////////////////////
   }else {
