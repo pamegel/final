@@ -163,92 +163,12 @@ function receivedPostback(event) {
   else if(payload == 'noThank'){
        sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ");
        NoThank(senderID)
-  }////////////////////////////////////////////////////////////////////////////////////////////
+  }///////////////////////////////////////////////////////////////////////////////////////////////
   else if (payload == 'find1' || payload == 'find2' || payload == 'find3' || payload == 'find4' || payload == 'find5' || payload == 'find6' || payload == 'find7' || payload == 'find8' || payload == 'find9' || payload == 'find10' ) {
    sendTextMessage(senderID,"test")
     for(var i = 0; i < data.bigdata.length; i++) {
     var obj = data.bigdata;
-     else if(payload == obj.payload1){
-     setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail4.text )}, 2000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail5.text )}, 2500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail6.text )}, 3000)
-      }
-      else if(payload == obj.payload2){
-     setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail4.text )}, 2000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail5.text )}, 2500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail6.text )}, 3000)
-      }
-      else if(payload == obj.payload3){
-     setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail4.text )}, 2000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail5.text )}, 2500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail6.text )}, 3000)
-      }
-     else if(payload == obj.payload4){
-     setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail4.text )}, 2000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail5.text )}, 2500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail6.text )}, 3000)
-      }
-      else if(payload == obj.payload5){
-     setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail4.text )}, 2000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail5.text )}, 2500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail6.text )}, 3000)
-      }
-      else if(payload == obj.payload1){
-     setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail4.text )}, 2000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail5.text )}, 2500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail6.text )}, 3000)
-      }
-     else if(payload == obj.payload6){
-     setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail4.text )}, 2000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail5.text )}, 2500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail6.text )}, 3000)
-      }
-      else if(payload == obj.payload7){
-     setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail4.text )}, 2000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail5.text )}, 2500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail6.text )}, 3000)
-      }
-      else if(payload == obj.payload8){
-     setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail4.text )}, 2000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail5.text )}, 2500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail6.text )}, 3000)
-      }
-      else if(payload == obj.payload9){
-     setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail4.text )}, 2000)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail5.text )}, 2500)
-     setTimeout(function() { sendTextMessage(senderID, obj.detail6.text )}, 3000)
-      }
-      else if(payload == obj.payload10){
+     if(payload == obj.payload1){
      setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
      setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
      setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
