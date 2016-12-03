@@ -2,7 +2,7 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
 var app = express()
-var data = require('./botfb-bd219-export.json')
+var data = require('./data.json')
 
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 4000))
