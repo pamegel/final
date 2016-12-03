@@ -162,7 +162,7 @@ function receivedPostback(event) {
               setTimeout(function() {sendTextMessage(senderID, obj.text6); }, 3000)
             }
           }
-
+}
    ///////////////////////////////////////////////////////////////////////////////////////////////
 
   // When a postback is called, we'll send a message back to the sender to
