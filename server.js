@@ -164,17 +164,15 @@ function receivedPostback(event) {
        sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ");
        NoThank(senderID)
   }////////////////////////////////////////////////////////////////////////////////////////////
-  else if (payload) {
+  else if (payload == '1' || payload == '2' || payload == '3' || payload == '4' || payload == '5' || payload == '6' || payload == '7' || payload == '8' || payload == '9' || payload == '10' ) {
  for(var i = 0; i < data.bigdata.length; i++) {
     var obj = data.bigdata.payload[i];
-   if(payload == i){
      setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
      setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
      setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
      setTimeout(function() { sendTextMessage(senderID, obj.detail4.text )}, 2000)
      setTimeout(function() { sendTextMessage(senderID, obj.detail5.text )}, 2500)
      setTimeout(function() { sendTextMessage(senderID, obj.detail6.text )}, 3000)
-   }
  }
            
    ////////////////////////////////////////////////////////////////////////////////////////////
