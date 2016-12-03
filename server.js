@@ -161,6 +161,7 @@ function receivedPostback(event) {
               setTimeout(function() {sendTextMessage(senderID, obj.text5); }, 2500)
               setTimeout(function() {sendTextMessage(senderID, obj.text6); }, 3000)
             }
+          }
 
    ///////////////////////////////////////////////////////////////////////////////////////////////
 
