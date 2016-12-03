@@ -86,49 +86,31 @@ function receivedMessage(event) {
   }*/
 
   if (messageText) {
-    if (messageText === 'HELLO' || messageText === 'hello' || messageText === 'Hello' ) {
-      sendTextMessage(senderID, "สวัสดีเหมียววว");
-    }
-    else if (messageText === 'ขอบใจ' || messageText === 'ขอบคุณ' ){
-      sendTextMessage(senderID, "ยินดีช่วยเหมียวว <3");
-    }
-     else if (messageText === 'ควย' || messageText === 'ฟวย' || messageText === 'สัส' || messageText === 'พ่องตาย'|| messageText === 'พ่อมึงตาย' || messageText === 'แม่มึงตาย' || messageText === 'แม่งตาย' ){
-     sendTextMessage(senderID, " 👎 สุภาพหน่อย ");
-    }
-     else if (messageText === 'กาก'){
-      sendTextMessage(senderID, "เดะหน้าเป็นรอยหรอก 😾");
-    }
     // If we receive a text message, check to see if it matches a keyword
     // and send back the example. Otherwise, just echo the text we received.
     switch (messageText) {
         case 'HELLO':
-        sendGreetMessage(senderID);
-        break;
         case 'hello':
-        sendGreetMessage(senderID);
-        break;
         case 'Hello':
+        sendTextMessage(senderID, "สวัสดีเหมียววว");
         sendGreetMessage(senderID);
-        break;
-        case 'ขอบใจ' :
-        break;
-        case 'ควย' :
-        break;
-        case 'ฟวย' :
-        break;
-        case 'สัส' :
         break;
         case 'ขอบคุณ' :
+        case 'ขอบใจ' :
+        sendTextMessage(senderID, "ยินดีช่วยเหมียวว <3");
         break;
+        case 'สัส' :
+        case 'ควย' :
+        case 'ฟวย' :
         case 'พ่องตาย' :
-        break;
         case 'พ่อมึงตาย' :
-        break;
-        case 'แม่มึงตาย' :
-        break;
         case 'แม่งตาย' :
-        break;
+        case 'แม่งตาย' :
+        sendTextMessage(senderID, " 👎 สุภาพหน่อย ");
+        break;  
         case 'กาก' :
+        case 'ควาย' :
+        sendTextMessage(senderID, "เดะหน้าเป็นรอยหรอก 😾");
         break
       /*case 'quick reply':
         sendQuickReply(senderID);
