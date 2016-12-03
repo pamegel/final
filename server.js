@@ -146,7 +146,7 @@ function receivedPostback(event) {
   else if(payload){
       for(var i = 0; i < data.bigdata.length; i++) {
                var obj = data.bigdata[i];
-               if(payload==obj.id[i]){
+               if(payload==obj.id){
                  setTimeout(function() {sendTextMessage(senderID, obj.text1); }, 500)
                  setTimeout(function() {sendTextMessage(senderID, obj.text2); }, 1000)
                  setTimeout(function() {sendTextMessage(senderID, obj.text3); }, 1500)
