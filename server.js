@@ -144,9 +144,9 @@ function receivedPostback(event) {
        NoThank(senderID)
   }////////////////////////////////////////////////////////////////////////////////////////////
   else if(payload){
-      for(var i = 0; i < data.bigdata.length; i++) {
+      for(var i = 1; i < data.bigdata.length; i++) {
                var obj = data.bigdata[i];
-               if(payload==obj.id){
+               if(payload==1){
                  setTimeout(function() {sendTextMessage(senderID, obj.text1); }, 500)
                  setTimeout(function() {sendTextMessage(senderID, obj.text2); }, 1000)
                  setTimeout(function() {sendTextMessage(senderID, obj.text3); }, 1500)
