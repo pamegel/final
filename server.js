@@ -165,7 +165,7 @@ function receivedPostback(event) {
        NoThank(senderID)
   }////////////////////////////////////////////////////////////////////////////////////////////
   else if (payload == 'find1' || payload == 'find2' || payload == 'find3' || payload == 'find4' || payload == 'find5' || payload == 'find6' || payload == 'find7' || payload == 'find8' || payload == 'find9' || payload == 'find10' ) {
-   sendTextMessage(senderID,test)
+   sendTextMessage(senderID,"test")
     for(var i = 0; i < data.bigdata.length; i++) {
     var obj = data.bigdata.payload[i];
      setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
