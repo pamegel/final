@@ -144,9 +144,9 @@ function receivedPostback(event) {
        NoThank(senderID)
   }////////////////////////////////////////////////////////////////////////////////////////////
   else if(payload){
-      for(var i = 1; i < data.bigdata.length; i++) {
-               var obj = data.bigdata[i];
-               if(payload==1){
+      //for(var i = 1; i < data.bigdata.length; i++) {
+               var obj = data.bigdata[payload];
+               //if(==1){
                  setTimeout(function() {sendTextMessage(senderID, obj.text1); }, 500)
                  setTimeout(function() {sendTextMessage(senderID, obj.text2); }, 1000)
                  setTimeout(function() {sendTextMessage(senderID, obj.text3); }, 1500)
@@ -154,8 +154,8 @@ function receivedPostback(event) {
                  setTimeout(function() {sendTextMessage(senderID, obj.text5); }, 2500)
                  setTimeout(function() {sendTextMessage(senderID, obj.text6); }, 3000)
                  setTimeout(function() {fineHeres(senderID); },  3500)
-               }
-             }
+              // }
+          //   }
   }else {
     var result = "";
   }
