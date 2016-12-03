@@ -166,16 +166,15 @@ function receivedPostback(event) {
   }////////////////////////////////////////////////////////////////////////////////////////////
   else if (payload) {
  for(var i = 0; i < data.bigdata.length; i++) {
-    var obj = data.bigdata[i];
-    if(payload==payload[i])
-    {
+    var obj = data.bigdata.payload[i];
+   
      setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
      setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
      setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
      setTimeout(function() { sendTextMessage(senderID, obj.detail4.text )}, 2000)
      setTimeout(function() { sendTextMessage(senderID, obj.detail5.text )}, 2500)
      setTimeout(function() { sendTextMessage(senderID, obj.detail6.text )}, 3000)
-    }
+   
  }
            
    ////////////////////////////////////////////////////////////////////////////////////////////
