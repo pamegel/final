@@ -164,21 +164,16 @@ function receivedPostback(event) {
        sendTextMessage(senderID, "ไม่ต้องการความช่วยเหลือเหยออ เหมียวว :("+"\n"+"หากคุณต้องการมองหาที่ๆน่าเที่ยวในปราจีนบุรีอีก ให้แมวช่วยสิ");
        NoThank(senderID)
   }///////////////////////////////////////////////////////////////////////////////////////////////
-  else if (payload == 'find1' || payload == 'find2' || payload == 'find3' || payload == 'find4' || payload == 'find5' || payload == 'find6' || payload == 'find7' || payload == 'find8' || payload == 'find9' || payload == 'find10' ) {
+  else if (payload == '1' || payload == '2' || payload == '3' || payload == '4' || payload == '5' || payload == '6' || payload == '7' || payload == '8' || payload == '9' || payload == '10' ) {
    sendTextMessage(senderID,"test")
-    for(var i = 0; i < data.bigdata.length; i++) {
-    var obj = data.bigdata;
-     if(payload == obj.payload1){
+      var obj = data.bigdata[payload];
      setTimeout(function() { sendTextMessage(senderID, obj.detail1.text )}, 500)
      setTimeout(function() { sendTextMessage(senderID, obj.detail2.text )}, 1000)
      setTimeout(function() { sendTextMessage(senderID, obj.detail3.text )}, 1500)
      setTimeout(function() { sendTextMessage(senderID, obj.detail4.text )}, 2000)
      setTimeout(function() { sendTextMessage(senderID, obj.detail5.text )}, 2500)
      setTimeout(function() { sendTextMessage(senderID, obj.detail6.text )}, 3000)
-      }
-      
- }
-           
+               
    ////////////////////////////////////////////////////////////////////////////////////////////
   }else {
     var result = "";
@@ -238,7 +233,7 @@ function findLocations(recipientId, messageText) {
               {
                 type:"postback",
                 title:"📍 เลือกที่นี้",
-                payload:"find1"
+                payload: 1
               }]
            },
            {
@@ -250,7 +245,7 @@ function findLocations(recipientId, messageText) {
                {
                  type:"postback",
                  title:"📍 เลือกที่นี้",
-                 payload:"find2"
+                 payload: 2
                }]
             },
             {
@@ -262,7 +257,7 @@ function findLocations(recipientId, messageText) {
                 {
                   type:"postback",
                   title:"📍 เลือกที่นี้",
-                  payload:"find3"
+                  payload: 3
                 }]
              },
              {
@@ -274,7 +269,7 @@ function findLocations(recipientId, messageText) {
                  {
                    type:"postback",
                    title:"📍 เลือกที่นี้",
-                   payload:"find4"
+                   payload: 4
                  }]
               },
               {
@@ -286,7 +281,7 @@ function findLocations(recipientId, messageText) {
                   {
                     type:"postback",
                     title:"📍 เลือกที่นี้",
-                    payload:"find5"
+                    payload: 5
                   }]
                },
                {
@@ -298,7 +293,7 @@ function findLocations(recipientId, messageText) {
                    {
                      type:"postback",
                      title:"📍 เลือกที่นี้",
-                     payload:"find6"
+                     payload: 6
                    }]
                 },
                 {
@@ -310,7 +305,7 @@ function findLocations(recipientId, messageText) {
                     {
                       type:"postback",
                       title:"📍 เลือกที่นี้",
-                      payload:"find7"
+                      payload: 7
                     }]
                  },
                  {
@@ -322,7 +317,7 @@ function findLocations(recipientId, messageText) {
                      {
                        type:"postback",
                        title:"📍 เลือกที่นี้",
-                       payload:"find8"
+                       payload: 8
                      }]
                   },
                   {
@@ -334,7 +329,7 @@ function findLocations(recipientId, messageText) {
                       {
                         type:"postback",
                         title:"📍 เลือกที่นี้",
-                        payload:"9"
+                        payload: 9
                       }]
                    },
                    {
@@ -346,7 +341,7 @@ function findLocations(recipientId, messageText) {
                        {
                          type:"postback",
                          title:"📍 เลือกที่นี้",
-                         payload:"find10"
+                         payload: 10
                        },
                        ]
                     }]
