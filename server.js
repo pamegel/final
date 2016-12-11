@@ -32,16 +32,15 @@ app.post('/webhook/', function (req, res) {
       }, function(error, response, body) {
         try {
           var condition = body.main;
-          sendTextMessage(sender, "ตอนนี้ " + condition.temp + " องศาที ่" + location);
+          sendTextMessage(sender, "ตอนนี้ " + condition.temp + " องศาที ่" + condition.name + " ใช่ที่ที่คุณค้นหามั้ย");
         } catch(err) {
           console.error('error caught', err);
           sendTextMessage(sender, "There was an error.");
         }
       })
 
-      if (payload === 'USER_DEFINED_PAYLOAD') {
-        sendGenericMessage(sender)
-        continue
+      if (payload == 'USER_DEFINED_PAYLOAD') {
+        sendTextMessage(senderID, "สวัสดี :] \nพิมพ์ชือสถานที่ที่ต้องการจะรู้สภาพอากาศดูสิ ")
       }
       var text2 = text.split(' ')
       sendTextMessage(sender, parseInt(text2[0]) + parseInt(text2[1]) )
@@ -74,16 +73,6 @@ function sendTextMessage (sender, text) {
   })
 }
 
-function sendGenericMessage (sender) {
-  let messageData = {
-    'attachment': {
-      'type': 'template',
-      payload: {
-        template_type: "button",
-        text : "สวัสดีครับพิมพ์ชื่อสถานที่ที่คุณอยากรู้สภาพอากาศสิ",
-      }
-    }
-  }
   request({
     url: 'https://graph.facebook.com/v2.6/me/messages',
     qs: {access_token: token},
