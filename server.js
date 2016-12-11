@@ -32,7 +32,7 @@ app.post('/webhook/', function (req, res) {
       }, function(error, response, body) {
         try {
           var condition = body.main;
-          sendTextMessage(sender, "ตอนนี้ " + condition.temp + " องศาที ่" + condition.name + " ใช่ที่ที่คุณค้นหามั้ย");
+          sendTextMessage(sender, "ตอนนี้ " + condition.temp + " องศาที ่" + condition.name + " ใช่ที่ที่คุณต้องการมั้ย ฦฦ");
         } catch(err) {
           console.error('error caught', err);
           sendTextMessage(sender, "There was an error.");
@@ -88,7 +88,6 @@ function sendTextMessage (sender, text) {
       console.log('Error: ', response.body.error)
     }
   })
-}
 
 app.listen(app.get('port'), function () {
   console.log('running on port', app.get('port'))
