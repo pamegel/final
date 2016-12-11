@@ -35,7 +35,7 @@ app.post('/webhook/', function (req, res) {
           sendTextMessage(sender, "ตอนนี้ " + condition.temp + " องศาที ่" + location );
         } catch(err) {
           console.error('error caught', err);
-          sendTextMessage(sender, "There was an error.");
+          sendTextMessage(sender, "ลองพิมพ์ชื่อสถานที่ที่ต้องการรู้สิ");
         }
       })
 
