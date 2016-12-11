@@ -9,7 +9,7 @@ app.set('port', (process.env.PORT || 5000))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 app.get('/', function (req, res) {
-  res.send('test test')
+  res.send('kk')
 })
 app.get('/webhook/', function (req, res) {
   if (req.query['hub.verify_token'] === '123456') {
@@ -39,13 +39,38 @@ app.post('/webhook/', function (req, res) {
         }
       })
 
-      if (text === 'Generic') {
-        sendGenericMessage(sender)
-        continue
-      }
-      var text2 = text.split(' ')
-      sendTextMessage(sender, parseInt(text2[0]) + parseInt(text2[1]) )
-    }
+      if (messageText) {
+         switch (messageText) {
+            case 'HELLO':
+            case 'hello':
+            case 'Hello':
+            sendTextMessage(senderID, "สวัสดีเหมียววว");
+            sendGreetMessage(senderID);
+            break;
+            case 'ขอบคุณ' :
+            case 'ขอบใจ' :
+            sendTextMessage(senderID, "ยินดีช่วยเหมียวว <3");
+            break;
+            case 'สัส' :
+            case 'ควย' :
+            case 'ฟวย' :
+            case 'พ่องตาย' :
+            case 'พ่อมึงตาย' :
+            case 'แม่งตาย' :
+            case 'แม่งตาย' :
+            sendTextMessage(senderID, " 👎 สุภาพหน่อย ");
+            break;
+            case 'กาก' :
+            case 'ควาย' :
+            sendTextMessage(senderID, "เดะหน้าเป็นรอยหรอก 😾");
+            break
+    /*case 'quick reply':
+    sendQuickReply(senderID);
+    break;*/
+            default:
+            sendTextMessage(senderID, "พิมพ์อะไรแมวไม่รู้เรื่อง :p \n เลือกเมนูเอาข้างล่างละกัน " );
+            sendGreetMessage(senderID)
+            }
     if (event.postback) {
       let text = JSON.stringify(event.postback)
       sendTextMessage(sender, 'Postback received: ' + text.substring(0, 200), token)
