@@ -32,14 +32,14 @@ app.post('/webhook/', function (req, res) {
       }, function(error, response, body) {
         try {
           var condition = body.main;
-          sendTextMessage(sender, "Today is " + condition.temp + "Celsius in " + location);
+          sendTextMessage(sender, "ตอนนี้ " + condition.temp + " องศาที ่" + location);
         } catch(err) {
           console.error('error caught', err);
           sendTextMessage(sender, "There was an error.");
         }
       })
 
-      if (text === 'Generic') {
+      if (payload === 'USER_DEFINED_PAYLOAD') {
         sendGenericMessage(sender)
         continue
       }
@@ -78,31 +78,9 @@ function sendGenericMessage (sender) {
   let messageData = {
     'attachment': {
       'type': 'template',
-      'payload': {
-        'template_type': 'generic',
-        'elements': [{
-          'title': 'First card',
-          'subtitle': 'Element #1 of an hscroll',
-          'image_url': 'http://messengerdemo.parseapp.com/img/rift.png',
-          'buttons': [{
-            'type': 'web_url',
-            'url': 'https://www.messenger.com',
-            'title': 'web url'
-          }, {
-            'type': 'postback',
-            'title': 'Postback',
-            'payload': 'Payload for first element in a generic bubble'
-          }]
-        }, {
-          'title': 'Second card',
-          'subtitle': 'Element #2 of an hscroll',
-          'image_url': 'http://messengerdemo.parseapp.com/img/gearvr.png',
-          'buttons': [{
-            'type': 'postback',
-            'title': 'Postback',
-            'payload': 'Payload for second element in a generic bubble'
-          }]
-        }]
+      payload: {
+        template_type: "button",
+        text : "สวัสดีครับพิมพ์ชื่อสถานที่ที่คุณอยากรู้สภาพอากาศสิ",
       }
     }
   }
