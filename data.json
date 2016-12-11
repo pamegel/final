@@ -1,16 +1,16 @@
 {
-coord: {
-lon: 100.5,
-lat: 13.75
-},
-weather: [
-{
-id: 801,
-main: "Clouds",
-description: "few clouds",
-icon: "02d"
-}
-],
+  coord: {
+    lon: 100.5,
+    lat: 13.75
+  },
+    weather: [
+    {
+    id: 801,
+    main: "Clouds",
+    description: "few clouds",
+    icon: "02d"
+    }   
+    ],
 base: "stations",
 main: {
 temp: 300.15,
