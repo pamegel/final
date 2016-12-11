@@ -59,7 +59,7 @@ function receivedMessage(event) {
   var message = event.message;
   var API_KEY = "2afebe3ee1fefaf7d0c2d45033a54edf"
 
-
+  var apiURL = getJSON('http://api.openweathermap.org/data/2.5/weather?q='+ loc.'bankok&appid=' API_KEY )
 
   console.log("Received message for user %d and page %d at %d with message:",
     senderID, recipientID, timeOfMessage);
@@ -93,7 +93,7 @@ function receivedMessage(event) {
         case 'HELLO':
         case 'hello':
         case 'Hello':
-        $.getJSON('http://api.openweathermap.org/data/2.5/weather?q='+ loc.'bankok&appid=')
+        getJSON('http://api.openweathermap.org/data/2.5/weather?q='+ loc.'bankok&appid=' API_KEY );
         break;
         case 'ขอบคุณ' :
         case 'ขอบใจ' :
@@ -107,7 +107,7 @@ function receivedMessage(event) {
         case 'แม่งตาย' :
         case 'แม่งตาย' :
         sendTextMessage(senderID, " 👎 สุภาพหน่อย ");
-        break;
+        break;  
         case 'กาก' :
         case 'ควาย' :
         sendTextMessage(senderID, "เดะหน้าเป็นรอยหรอก 😾");
