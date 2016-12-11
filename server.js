@@ -31,7 +31,19 @@ app.post('/webhook', function (req, res) {
     data.entry.forEach(function(pageEntry) {
       var pageID = pageEntry.id;
       var timeOfEvent = pageEntry.time;
-
+      var location = event.message.text
+      var weatherEndpoint = 'http://api.openweathermap.org/data/2.5/weather?q=' +location+ '&units=metric&appid=2afebe3ee1fefaf7d0c2d45033a54edf'
+      request({
+        url: weatherEndpoint,
+        json: true
+      }, function(error, response, body) {
+        try {var condition = body.main;
+          sendTextMessage(sender, "Today is " + condition.temp + "Celsius in " + location);
+        } catch(err) {
+          console.error('error caught', err);
+          sendTextMessage(sender, "There was an error.");
+        }
+      })
       // Iterate over each messaging event
       pageEntry.messaging.forEach(function(messagingEvent) {
         if (messagingEvent.message) {
@@ -57,9 +69,7 @@ function receivedMessage(event) {
   var recipientID = event.recipient.id;
   var timeOfMessage = event.timestamp;
   var message = event.message;
-  var API_KEY = "2afebe3ee1fefaf7d0c2d45033a54edf"
 
-  var apiURL = getJSON('http://api.openweathermap.org/data/2.5/weather?q=bankok&appid=' API_KEY )
 
   console.log("Received message for user %d and page %d at %d with message:",
     senderID, recipientID, timeOfMessage);
@@ -93,7 +103,7 @@ function receivedMessage(event) {
         case 'HELLO':
         case 'hello':
         case 'Hello':
-        getJSON('http://api.openweathermap.org/data/2.5/weather?q='+ loc.'bankok&appid=' API_KEY );
+        weatherEndpoint;
         break;
         case 'ขอบคุณ' :
         case 'ขอบใจ' :
