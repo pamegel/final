@@ -1,42 +1,42 @@
 {
-  coord: {
-    lon: 100.5,
-    lat: 13.75
-  },
-    weather: [
-    {
-    id: 801,
-    main: "Clouds",
-    description: "few clouds",
-    icon: "02d"
-    }   
-    ],
-base: "stations",
-main: {
-temp: 300.15,
-pressure: 1012,
-humidity: 61,
-temp_min: 300.15,
-temp_max: 300.15
+"coord": {
+  "lon": 100.5,
+          "lat": 13.75
 },
-visibility: 9000,
-wind: {
-speed: 1,
-deg: 340
+"weather": [
+{
+"id": 801,
+"main": "Clouds",
+"description": "few clouds",
+"icon": "02d"
+}
+],
+"base": "stations",
+"main": {
+"temp": 300.15,
+"pressure": 1012,
+"humidity": 61,
+"temp_min": 300.15,
+"temp_maxv": 300.15
 },
-clouds: {
-all: 20
+"visibility": 9000,
+"wind": {
+"speed": 1,
+"deg": 340
 },
-dt: 1481423400,
-sys: {
-type: 1,
-id: 7917,
-message: 0.0104,
-country: "TH",
-sunrise: 1481412684,
-sunset: 1481453480
+"clouds": {
+"all": 20
 },
-id: 1608132,
-name: "Changwat Nonthaburi",
-cod: 200
+"dt": 1481423400,
+"sys": {
+"type": 1,
+"id": 7917,
+"message": 0.0104,
+"country": "TH",
+"sunrise": 1481412684,
+"sunset": 1481453480
+},
+"id": 1608132,
+"name": "Changwat Nonthaburi",
+"cod": 200
 }
