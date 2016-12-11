@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 app.get('/webhook', function(req, res) {
-  var key = 'EAAYB5mZATsskBAAdcGuj2NvE2oRLRCiNSiFdbnutLx5nZBh1zkwkGuJXOQoLSUchWlTFQZCyktp3nOUomPhHXMcF4GvvtrESHR1HKp88F0DFIqbuZCjsoOa8XNucmGVTupQMOYOThIuiZAwpgcPSdKbmDUmXA2M6ZBrxopy0VAfAZDZD'
+    var key = 'EAAYB5mZATsskBAAdcGuj2NvE2oRLRCiNSiFdbnutLx5nZBh1zkwkGuJXOQoLSUchWlTFQZCyktp3nOUomPhHXMcF4GvvtrESHR1HKp88F0DFIqbuZCjsoOa8XNucmGVTupQMOYOThIuiZAwpgcPSdKbmDUmXA2M6ZBrxopy0VAfAZDZD'
   if (req.query['hub.mode'] === 'subscribe' &&
     req.query['hub.verify_token'] === key) {
     console.log("Validating webhook");
@@ -57,6 +57,9 @@ function receivedMessage(event) {
   var recipientID = event.recipient.id;
   var timeOfMessage = event.timestamp;
   var message = event.message;
+  var API_KEY = "2afebe3ee1fefaf7d0c2d45033a54edf"
+
+
 
   console.log("Received message for user %d and page %d at %d with message:",
     senderID, recipientID, timeOfMessage);
@@ -90,8 +93,7 @@ function receivedMessage(event) {
         case 'HELLO':
         case 'hello':
         case 'Hello':
-        sendTextMessage(senderID, "สวัสดีเหมียววว");
-        sendGreetMessage(senderID);
+        $.getJSON('http://api.openweathermap.org/data/2.5/weather?q='+ loc.'bankok&appid=')
         break;
         case 'ขอบคุณ' :
         case 'ขอบใจ' :
@@ -105,7 +107,7 @@ function receivedMessage(event) {
         case 'แม่งตาย' :
         case 'แม่งตาย' :
         sendTextMessage(senderID, " 👎 สุภาพหน่อย ");
-        break;  
+        break;
         case 'กาก' :
         case 'ควาย' :
         sendTextMessage(senderID, "เดะหน้าเป็นรอยหรอก 😾");
