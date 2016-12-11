@@ -32,8 +32,7 @@ app.post('/webhook/', function (req, res) {
       }, function(error, response, body) {
         try {
           var condition = body.main;
-          sendTextMessage(sender, "ตอนนี้อุณหภูมิ " + condition.temp + " องศาที ่" + location );
-           sendTextMessage(sender, "สภาพอากาศตอนนี้"+ weather.main + "\n"+ weather.description+ "\n"+ weather.icon);
+          sendTextMessage(sender, "ตอนนี้อุณหภูมิ " + condition.temp + " องศาที ่" + location + "\nสภาพอากาศตอนนี้"+ weather.main + "\n"+ weather.description+ "\n"+ weather.icon);
         } catch(err) {
           console.error('error caught', err);
           sendTextMessage(sender, "ลองพิมพ์ชื่อสถานที่ที่ต้องการเป็นภาษาอังงกฤษสิ");
