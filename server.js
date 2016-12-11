@@ -25,7 +25,7 @@ app.post('/webhook/', function (req, res) {
     if (event.message && event.message.text) {
       let text = event.message.text
       var location = event.message.text
-      var payload = event.postback.payload;
+      
       var weatherEndpoint = 'http://api.openweathermap.org/data/2.5/weather?q=' +location+ '&units=metric&appid=2afebe3ee1fefaf7d0c2d45033a54edf'
       request({
         url: weatherEndpoint,
@@ -40,7 +40,7 @@ app.post('/webhook/', function (req, res) {
         }
       })
 
-      if (payload == 'test') {
+      if (event.postback.payload == 'test') {
         sendTextMessage(senderID, "สวัสดี :] \nพิมพ์ชือสถานที่ที่ต้องการจะรู้สภาพอากาศดูสิ ")
         sendGenericMessage(senderID)
       }
